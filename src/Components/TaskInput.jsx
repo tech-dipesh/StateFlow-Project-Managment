@@ -1,25 +1,36 @@
 import React, { useState } from 'react'
 
-export default function TaskInput() {
-  const [data, setData]=useState({});
+export default function TaskInput({setTasks}) {
+  const [data, setData]=useState({
+    title: '',status: '', id: '',
+  });
+  const [error, setError]=useState(false);
   const submitForm=(e)=>{
     e.preventDefault();
-    console.log(e);
-    console.log("Form submittted");
+    if(!(data.title) || !(data.status)){
+      setError(true)
+      return;
+    }
+    const newTaskWithId={...data, id: crypto.randomUUID()};
+    setTasks((prev)=>[...prev, newTaskWithId])
+    setError(false)
+    setData({title: '', status: ''})
+    console.log(data);
   }
   return (
-    <div className='flex h-screen'>
-    <div className='m-auto'>
-      <form onClick={(e)=>submitForm(e)}>
-      <input type="text" placeholder='Please Enter your task.'/>
-      <select name="Status" id="">
-        <option hidden className='bg-red-500'>Change Status</option>
-        <option>To do</option>
-        <option>In Progress</option>
-        <option>Completed</option>
+    <div className='h-1/4 flex items-center justify-center'>
+    <div className=''>
+      <form onSubmit={submitForm}>
+      <input type="text" placeholder='Please Enter your task.' name='title' onChange={(e)=>setData((prev)=>({...prev, title: e.target.value}))} value={data.title}/>
+      <select name="status" className='' onChange={(e)=>setData((prev)=>({...prev, status: e.target.value}))} value={data.status}>
+        <option hidden name='status'>Change Status</option>
+        <option name='todo'>To do</option>
+        <option name='inprogress'>In Progress</option>
+        <option name='Completed'>Completed</option>
       </select>
       <input className='pointer bg-gray-800 cursor-pointer p-2 rounded-xl' type="submit" value='Submit'/>
       </form>
+    <h1 className='text-red-500 text-5xl '>{error && 'Please Enter the input'}</h1>
     </div>
     </div>
   )
