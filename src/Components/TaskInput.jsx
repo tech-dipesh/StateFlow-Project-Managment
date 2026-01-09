@@ -28,9 +28,9 @@ export default function TaskInput({setTasks}) {
         <option name='inprogress'>In Progress</option>
         <option name='Completed'>Completed</option>
       </select>
-      <input className='pointer bg-gray-800 cursor-pointer p-2 rounded-xl' type="submit" value='Submit'/>
+      <input className='pointer bg-gray-600 cursor-pointer p-2 rounded-xl' type="submit" value='Submit'/>
       </form>
-    <h1 className='text-red-500 text-5xl '>{error && 'Please Enter the input'}</h1>
+    <h1 className='text-red-500 text-5xl '>{error && 'Please Enter all inputs.'}</h1>
     </div>
     </div>
   )
