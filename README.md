@@ -16,7 +16,7 @@
   - Controlled input default input value fix.
   - during the setLocalStorage hoooks, i've facwe as soon as it's rerender that function it setting duplicate values.
     - It's due to the prev spread operator
-  
+  - as i've face the duplicate entreis, which i can solve with the check on array which have duplicate just update that.
 
 
 
@@ -24,3 +24,12 @@
   - User input
   - show on table
   - can edit the option
+  - Also can cancel the option
+  - make on the grid layout
+  - currently implementing the feature option
+
+
+# Library Used:
+  - tailwindcss
+  - fontawesome
+  

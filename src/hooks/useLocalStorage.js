@@ -9,7 +9,6 @@ const [value, setValue] = useState(() =>
         const Fun=updatedValue(value);
         localStorage.setItem(key, JSON.stringify(Fun));
         setValue(Fun)
-        console.log(Fun);
       }
       else{
         localStorage.setItem(key, JSON.stringify(updatedValue))
