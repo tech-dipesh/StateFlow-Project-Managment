@@ -139,8 +139,7 @@ Do **not** touch these yet:
 
 Those are **Phase 2 weapons**.
 
-Right now, they will **kill your momentum**.
-
+Right now, they will **kill your momentum**.  
 ---
 
 ## 🧩 What You Should Know Before Starting (Mentally)

@@ -15,7 +15,6 @@ export default function TaskInput({setTasks}) {
     setTasks((prev)=>[...prev, newTaskWithId])
     setError(false)
     setData({title: '', status: ''})
-    console.log(data);
   }
   return (
     <div className='h-1/4 flex items-center justify-center'>
