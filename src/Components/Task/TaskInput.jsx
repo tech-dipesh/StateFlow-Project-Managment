@@ -17,11 +17,11 @@ export default function TaskInput({setTasks}) {
     setData({title: '', status: ''})
   }
   return (
-    <div className='h-1/4 flex items-center justify-center'>
+    <div className='h-1/4 flex items-center justify-center mt-5'>
     <div className=''>
       <form onSubmit={submitForm}>
       <input type="text" placeholder='Please Enter your task.' name='title' onChange={(e)=>setData((prev)=>({...prev, title: e.target.value}))} value={data.title}/>
-      <select name="status" className='' onChange={(e)=>setData((prev)=>({...prev, status: e.target.value}))} value={data.status}>
+      <select name="status" className='cursor-pointer' onChange={(e)=>setData((prev)=>({...prev, status: e.target.value}))} value={data.status}>
         <option hidden name='status'>Change Status</option>
         <option name='todo'>To do</option>
         <option name='inprogress'>In Progress</option>
