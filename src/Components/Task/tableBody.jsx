@@ -99,6 +99,7 @@ export default function TableBody({ tasks, displayAllTasks, setTasks, setTitleEd
                 }
               </span>
             </td>
+            <td className='ml-5 justify-center p-2'><button>Medium</button></td>
             <td className="w-5">
               <button onClick={(e) => bothEditFeature(e, task)} className="p-2 m-2 bg-blue-400 rounded-xs cursor-pointer">{bothEdit === false ? 'Edit' : 'Save'}</button>
             </td>

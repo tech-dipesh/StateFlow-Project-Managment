@@ -17,7 +17,7 @@ export default function TaskTable({ tasks, setTasks, filterCritrea,  setFilterCr
   return (
     <div className="h-3/4 flex flex-col items-center overflow-auto p-8">
       <h1 className="text-3xl">Task Table</h1>
-      <table className="w-full max-w-4xl border-collapse border-2 border-gray-300"
+      <table className="w-full max-w-5xl border-collapse border-2 border-gray-300"
         onClick={(e) => {
           if (e.target === e.currentTarget ||
             e.target.tagName === 'TBODY' ||
@@ -37,6 +37,7 @@ export default function TaskTable({ tasks, setTasks, filterCritrea,  setFilterCr
             <th className="p-4 text-xl font-semibold text-left">Status
                   <FontAwesomeIcon icon={faFilter} className='cursor-pointer hover:text-blue-500 transition-colors ml-5' onClick={()=>SetIsFilterPopup(!isFilterPopup)}/>
      <Filter options={["To do", "In progress", "Completed"]} isFilterPopup={isFilterPopup} SetIsFilterPopup={SetIsFilterPopup} tasks={tasks} setTasks={setTasks} optionValue={filterCritrea} setOptionValue={setFilterCritrea}/></th>
+            <th className=" text-xl font-semibold text-center">Priority</th>
             <th className="p-4 text-xl font-semibold text-left">Description</th>
           </tr>
         </thead>

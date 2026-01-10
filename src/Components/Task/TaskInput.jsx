@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 export default function TaskInput({setTasks}) {
   const [data, setData]=useState({
-    title: '',status: '',  id: '',
+    title: '',status: '', priority: '', id: '',
   });
   const [error, setError]=useState(false);
   const submitForm=(e)=>{
@@ -14,7 +14,7 @@ export default function TaskInput({setTasks}) {
     const newTaskWithId={...data, id: crypto.randomUUID()};
     setTasks((prev)=>[...prev, newTaskWithId])
     setError(false)
-    setData({title: '', status: ''})
+    setData({title: '', status: '', priority: ''})
   }
   return (
     <div className='h-1/4 flex items-center justify-center mt-5'>
