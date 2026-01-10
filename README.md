@@ -17,7 +17,8 @@
   - during the setLocalStorage hoooks, i've facwe as soon as it's rerender that function it setting duplicate values.
     - It's due to the prev spread operator
   - as i've face the duplicate entreis, which i can solve with the check on array which have duplicate just update that.
-
+  - i'm doing the overenginneing on the filter option which i fix now.
+  
 
 
 # Features:

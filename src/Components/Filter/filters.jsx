@@ -6,12 +6,16 @@ export default function Filter({ options, isFilterPopup, SetIsFilterPopup, tasks
   const [selectOption, setSelectoption]=useState(null);
 
   const clickFilter = () => {
-    SetIsFilterPopup(!isFilterPopup)
-    // const allOptions=
-    const BelongThatOption=tasks.filter(f=>{
-      return f.status.toLowerCase()===optionValue.toLowerCase();
-    })
-    setOptionValue(BelongThatOption)
+    // SetIsFilterPopup(!isFilterPopup)
+    // // const allOptions=
+    // const BelongThatOption=tasks.filter(f=>{
+    //   return f.status.toLowerCase()===optionValue.toLowerCase();
+    // })
+    // console.log("option value is", optionValue);
+    // setOptionValue(BelongThatOption)
+    // console.log("Belong that option is", optionValue);
+    setSelectoption(null)
+      SetIsFilterPopup(false)
   }
   { return isFilterPopup && (
       <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>
@@ -24,7 +28,7 @@ export default function Filter({ options, isFilterPopup, SetIsFilterPopup, tasks
             className={`px-4 py-2 rounded-lg cursor-pointer text-white hover:bg-gray-700 transition-all duration-100
                  ${selectOption === i 
               ? 'bg-blue-500 text-white hover:bg-blue-600' 
-              : 'bg-gray-100 hover:bg-gray-200'
+              : 'bg-gray-100 hover:bg-gray-700 '
             }`}
             key={option}
             >
@@ -35,7 +39,10 @@ export default function Filter({ options, isFilterPopup, SetIsFilterPopup, tasks
         <hr className='border-gray-600 mb-6' />
         <div className='flex gap-3 justify-end'>
           <button className='px-5 py-2 bg-gray-600 rounded-lg text-white cursor-pointer hover:bg-gray-700 transition-colors'
-          onClick={()=>setOptionValue(null)}
+          onClick={()=>(
+            SetIsFilterPopup(!isFilterPopup),
+            setOptionValue(null)
+          )}
           >
             Clear All
           </button>

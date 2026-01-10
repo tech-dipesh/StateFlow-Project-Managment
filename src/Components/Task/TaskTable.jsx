@@ -17,7 +17,7 @@ export default function TaskTable({ tasks, setTasks }) {
   const [filterCritrea, setFilterCritrea]=useState();
 
   const displayAllTasks= filterCritrea
-  ? tasks.filter(task => task.status === filterCritrea)
+  ? tasks.filter(task => task.status.toLowerCase() === filterCritrea.toLowerCase())
   : tasks;
 
   const changeCurrentvalue = (e, id) => {
@@ -78,7 +78,7 @@ export default function TaskTable({ tasks, setTasks }) {
           <tr className="bg-gray-100 border-b-2 border-gray-300">
             <th className="p-4 m-10 text-xl font-semibold text-left">Title
                   <FontAwesomeIcon icon={faFilter} className='cursor-pointer hover:text-blue-500 transition-colors' onClick={()=>SetIsFilterPopup(!isFilterPopup)}/>
-     <Filter options={["To do", "In progress", "Completed"]} isFilterPopup={isFilterPopup} SetIsFilterPopup={SetIsFilterPopup} tasks={tasks} setTasks={setTasks}/>
+     <Filter options={["To do", "In Progress", "Completed"]} isFilterPopup={isFilterPopup} SetIsFilterPopup={SetIsFilterPopup} tasks={tasks} setTasks={setTasks}/>
             </th>
             <th className="p-4 text-xl font-semibold text-left">Status
                   <FontAwesomeIcon icon={faFilter} className='cursor-pointer hover:text-blue-500 transition-colors' onClick={()=>SetIsFilterPopup(!isFilterPopup)}/>
