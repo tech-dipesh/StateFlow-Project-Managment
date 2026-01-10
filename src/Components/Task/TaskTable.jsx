@@ -4,13 +4,13 @@ import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TableBody from "./tableBody";
 
-export default function TaskTable({ tasks, setTasks }) {
+export default function TaskTable({ tasks, setTasks, filterCritrea,  setFilterCritrea, searchResults }) {
   const [titleedit, setTitleEdit] = useState(null);
   const [isFilterPopup, SetIsFilterPopup]=useState(false);
-  const [filterCritrea, setFilterCritrea]=useState();
   const [statusedit, setStatusEdit] = useState(null);
 
-  const displayAllTasks= filterCritrea
+  const displayAllTasks= searchResults?searchResults:
+  filterCritrea
   ? tasks.filter(task => task.status.toLowerCase() === filterCritrea.toLowerCase())
   : tasks;
 

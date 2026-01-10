@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 export default function TaskInput({setTasks}) {
   const [data, setData]=useState({
-    title: '',status: '', id: '',
+    title: '',status: '',  id: '',
   });
   const [error, setError]=useState(false);
   const submitForm=(e)=>{

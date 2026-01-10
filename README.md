@@ -28,6 +28,8 @@
   - Also can cancel the option
   - make on the grid layout
   - currently implementing the feature option
+  - Now implement the filter option now currently implementing the search feturea.
+  - Now i've also add the 
 
 
 # Library Used:
