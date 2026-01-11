@@ -1,6 +1,7 @@
 # My Project Managment like Jira Project React:
   - 
-
+  Project STarted: 2026/01/08
+  
 # stack i've used:
   - Tailwindcss.
   - React
@@ -42,8 +43,23 @@
     - Also add the erorr page.
 
 
+# Drag And Drop Feature:
+  - For that i'm using the dnd library
+  - I've to wrap e everything inside the dndContext.
+  >:warning: I'm using teh `closestCorners` algorithm on dndContext to identify which is dragged.
+  - on the useDraggable, useDroppable both are hooks we've to pass the unique id with wrap on object.
+  - as useDroppable msot used property is, setNodref we can destructre is
+  - for the useDroppable is multiple of:
+    - id is your task's unique id
+    - setNodeRef → attach to the task's div
+    - listeners → spread on the div (enables drag with mouse/touch)
+    - attributes → accessibility stuff
+    - transform → makes it visually move while dragging 
+  
+
 
 # Library Used:
   - tailwindcss
   - fontawesome
-  
+  - dnd-kit/core (for the drag and drop feature)
+  - 
