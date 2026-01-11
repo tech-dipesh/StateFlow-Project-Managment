@@ -59,6 +59,14 @@
   - Have to import the {css} utlities to make the transform.
 
 
+## Context Api:
+  - for that it's recommend to create a folder inside the src.
+  - first we create `createContext` from teh react librarty and wrap everything of out content to this `createContext.provider` component of children
+  - now on `<createContext.Provider value={[]}>` what we pass the value will be a context which we can access on anywhere.
+  - the createContext naming we give is: `dataContext`
+  - for accessing just wrap: const [value]=`dataContext`
+   
+
 # Library Used:
   - tailwindcss
   - fontawesome

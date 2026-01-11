@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { closestCorners, DndContext } from "@dnd-kit/core";
 import Columns from "./Columns";
 export default function Board (){
+
+  console.log("Board data can be accessed now.");
+  
  const [items, setItems] = useState([
    {id: 1, task: "Eat", status: "IN_PROGRESS"}, 
    {id: 2, task: "Sleep", status: "TODO"},     
