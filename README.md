@@ -21,6 +21,8 @@
   - i'm doing the overenginneing on the filter option which i fix now.
   - i'm facing that it shows the object but it's the array which i'm unable to access the . property.  
 
+  >:white_check_mark: I should pass the header comps to the main inside router not on the render.
+  
 
 # Features:
   - User input

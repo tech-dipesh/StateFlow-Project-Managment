@@ -7,19 +7,20 @@ import {
   RouterProvider,
 } from "react-router";
 import Loader from "./Components/Common/Loader"
-import Error from './Components/Common/Error.jsx';
-import Task from './Components/Task/Task.js';
-import Board from './Components/Board View/Board.jsx';
+import Error from './Components/Common/Error';
+import List from './Components/List View/Task';
+import Board from './Components/Board View/Board';
+import Header from "./Components/Common/Header"
 let router = createBrowserRouter([
-  {
+{
     path: "/",
-    Component: <App/>,
-    loader: <Loader/>,
+    element: <App/>,
+    // loader: <Loader/>,
     errorElement: <Error/>,
     children: [
       {
         path: "/list",
-        element:  <Task/>
+        element:  <List/>
       },
       {
         path: "/board",
