@@ -38,7 +38,7 @@ export default function TaskTable({ tasks, setTasks, filterCritrea,  setFilterCr
                   <FontAwesomeIcon icon={faFilter} className='cursor-pointer hover:text-blue-500 transition-colors ml-5' onClick={()=>SetIsFilterPopup(!isFilterPopup)}/>
      <Filter options={["To do", "In progress", "Completed"]} isFilterPopup={isFilterPopup} SetIsFilterPopup={SetIsFilterPopup} tasks={tasks} setTasks={setTasks} optionValue={filterCritrea} setOptionValue={setFilterCritrea}/></th>
             <th className=" text-xl font-semibold text-center">Priority</th>
-            <th className="p-4 text-xl font-semibold text-left">Description</th>
+            <th className="p-4 text-xl font-semibold text-left">Edit</th>
           </tr>
         </thead>
           <TableBody tasks={tasks} setTasks={setTasks} displayAllTasks={displayAllTasks} titleedit={titleedit} setTitleEdit={setTitleEdit} statusedit={statusedit} setStatusEdit={setStatusEdit}/>

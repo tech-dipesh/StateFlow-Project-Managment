@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Option from '../Filter/Option';
 
 export default function TableBody({ tasks, displayAllTasks, setTasks, setTitleEdit, titleedit, setStatusEdit, statusedit }) {
 
@@ -12,12 +13,11 @@ export default function TableBody({ tasks, displayAllTasks, setTasks, setTitleEd
     if (editedinput === '') {
       return;
     }
-
     setTasks(tasks.map(task =>
       task.id === id ? { ...task, title: editedinput } : task
     ));
 
-    setEditedInput('');
+    setEditedInput(''); 
     setTitleEdit(null);
   }
 
@@ -25,7 +25,7 @@ export default function TableBody({ tasks, displayAllTasks, setTasks, setTitleEd
     setTasks(tasks.map(task =>
       task.id === id ? { ...task, status: e.target.value } : task
     ));
-    setBothEdit(null);
+    setBothEdit(!bothEdit);
     setStatusEdit(null);
   }
 
@@ -83,23 +83,23 @@ export default function TableBody({ tasks, displayAllTasks, setTasks, setTitleEd
             </td>
             <td
               className={`p-4 text-lg flex items-center gap-2 cursor-pointer
-              ${task.status === 'To do' ? 'bg-gray-500' : task.status === 'In Progress' ? 'bg-gray-400' : 'bg-gray-300'}`}
+              ${task.status === 'To do' ? 'bg-gray-500' : task.status === 'In Progress' ? 'bg-gray-400' : 'bg-blue-500'}`}
               onClick={() => setStatusEdit(task.id)} >
               <span className="w-5xs">{task.status}
                 {statusedit === task.id &&
                   <span className="inline-flex w-4xs  mx-10 gap-2 items-center bg-blue-100 p-1 rounded shadow">
-                    <select onClick={(e) => e.stopPropagation()} className="mx-5 bg-gray-200" onChange={(e) => optionEdit(e, task.id)}>
+                    <select onClick={(e) => e.stopPropagation()} className="mx-5 bg-gray-200 cursor-pointer" onChange={(e) => optionEdit(e, task.id)}>
                       <option hidden>Select Option</option>
-                      <option>To do</option>
-                      <option>In Progress</option>
-                      <option>Completed</option>
+                      <option className='cursor-pointer'>To do</option>
+                      <option  className='cursor-pointer'>In Progress</option>
+                      <option  className='cursor-pointer'>Completed</option>
                     </select>
                     <button onClick={(e) => (e.stopPropagation(), setStatusEdit(null))} className="px-3 py-1 bg-green-500 text-white rounded text-sm cursor-pointer">Cancel</button>
                   </span>
                 }
               </span>
             </td>
-            <td className='ml-5 justify-center p-2'><button>Medium</button></td>
+            <td className='p-2 w-64'><Option setTasks={setTasks} id={task.id} tasks={tasks} urgency={task.priority}/></td>
             <td className="w-5">
               <button onClick={(e) => bothEditFeature(e, task)} className="p-2 m-2 bg-blue-400 rounded-xs cursor-pointer">{bothEdit === false ? 'Edit' : 'Save'}</button>
             </td>

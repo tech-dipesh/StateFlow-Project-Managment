@@ -13,7 +13,6 @@ const [searchResults, setSearchResults] = useState(null);
       <TaskInput setTasks={setTasks}/>
       <Search tasks={tasks} setTasks={setTasks} filterCritrea={filterCritrea} setFilterCritrea={setFilterCritrea} setSearchResults={setSearchResults}/>
       <TaskTable tasks={tasks} setTasks={setTasks} filterCritrea={filterCritrea} setFilterCritrea={setFilterCritrea} searchResults={searchResults}/>
-      <Option/>
     </div>
   )
 }

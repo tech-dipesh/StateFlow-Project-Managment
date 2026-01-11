@@ -4,6 +4,7 @@
 # stack i've used:
   - Tailwindcss.
   - React
+  
 
 
 # Some syntax that i've forgetten or issue that i've fixed which i myself fix.:
@@ -18,7 +19,7 @@
     - It's due to the prev spread operator
   - as i've face the duplicate entreis, which i can solve with the check on array which have duplicate just update that.
   - i'm doing the overenginneing on the filter option which i fix now.
-  
+  - i'm facing that it shows the object but it's the array which i'm unable to access the . property.  
 
 
 # Features:
@@ -30,6 +31,14 @@
   - currently implementing the feature option
   - Now implement the filter option now currently implementing the search feturea.
   - Now i've also add the 
+  - Can change the priority of task of easy, medium and hard, 
+  - I've make the Option priotu more robusst add with the localStorage, each list
+  - Make Separate Drag and drop view.
+  
+  # Common Feature:
+    - Add the Loading state for just react router
+    - Also add the erorr page.
+
 
 
 # Library Used:
