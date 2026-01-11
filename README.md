@@ -21,9 +21,8 @@
   - as i've face the duplicate entreis, which i can solve with the check on array which have duplicate just update that.
   - i'm doing the overenginneing on the filter option which i fix now.
   - i'm facing that it shows the object but it's the array which i'm unable to access the . property.  
-
   >:white_check_mark: I should pass the header comps to the main inside router not on the render.
-  
+    - Lot of error on the drag and drop.
 
 # Features:
   - User input
@@ -37,6 +36,7 @@
   - Can change the priority of task of easy, medium and hard, 
   - I've make the Option priotu more robusst add with the localStorage, each list
   - Make Separate Drag and drop view.
+  - Finally able to implement the drag and drop feature.
   
   # Common Feature:
     - Add the Loading state for just react router
@@ -55,7 +55,8 @@
     - listeners → spread on the div (enables drag with mouse/touch)
     - attributes → accessibility stuff
     - transform → makes it visually move while dragging 
-  
+  - I've set the onDragEnd.
+  - Have to import the {css} utlities to make the transform.
 
 
 # Library Used:
