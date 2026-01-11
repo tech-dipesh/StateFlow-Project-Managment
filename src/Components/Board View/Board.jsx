@@ -1,9 +1,18 @@
-import React, { useState } from "react";
-import { closestCorners, DndContext } from "@dnd-kit/core";
+import React, { useContext, useState } from "react";
+import { closestCorners, DndContext, KeyboardSensor, MouseSensor, TouchSensor, useSensor, useSensors } from "@dnd-kit/core";
+import {dataContext} from "../../context/dataContextProvider"
 import Columns from "./Columns";
 export default function Board (){
-
-  console.log("Board data can be accessed now.");
+   const mouseSensor = useSensor(MouseSensor);
+  const touchSensor = useSensor(TouchSensor);
+  const keyboardSensor = useSensor(KeyboardSensor);
+const sensors = useSensors(
+    mouseSensor,
+    touchSensor,
+    keyboardSensor,
+  );
+  const [tasks, setTasks]=useContext(dataContext);
+  console.log("context is", tasks);  
   
  const [items, setItems] = useState([
    {id: 1, task: "Eat", status: "IN_PROGRESS"}, 
@@ -20,7 +29,7 @@ export default function Board (){
   ));
   }
   return (
-    <DndContext onDragEnd={handleDragDnd} collisionDetection={closestCorners}>
+    <DndContext onDragEnd={handleDragDnd} collisionDetection={closestCorners} sensors={sensors}>
     <Columns items={items} setItems={setItems}/>
     </DndContext>
   )

@@ -57,6 +57,7 @@
     - transform → makes it visually move while dragging 
   - I've set the onDragEnd.
   - Have to import the {css} utlities to make the transform.
+  - Also add the sensor which can work with keyword shortcut and mobile dragger 
 
 
 ## Context Api:
@@ -65,6 +66,7 @@
   - now on `<createContext.Provider value={[]}>` what we pass the value will be a context which we can access on anywhere.
   - the createContext naming we give is: `dataContext`
   - for accessing just wrap: const [value]=`dataContext`
+   - Now i've implement the tasks, setTAsks and wrap everything to the context api.
    
 
 # Library Used:
@@ -72,3 +74,6 @@
   - fontawesome
   - dnd-kit/core (for the drag and drop feature)
   - 
+
+
+# >:warning: When it says infinite renreder it mainly due to the infinite render or not wrap oout setter method on the useEffect, 

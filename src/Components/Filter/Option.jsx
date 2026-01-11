@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faCaretUp, faGripLines } from '@fortawesome/free-solid-svg-icons';
-export default function Option({tasks, setTasks, id, urgency}) {
+import { dataContext } from '../../context/dataContextProvider';
+export default function Option({id, urgency}) {
+    const [tasks, setTasks]=useContext(dataContext);
+  
   const [option, setoption]=useState(false);
   const [selectOption, setSelectOption]=useState(urgency)
   

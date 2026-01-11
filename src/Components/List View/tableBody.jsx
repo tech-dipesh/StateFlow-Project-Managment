@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Option from '../Filter/Option';
+import { dataContext } from '../../context/dataContextProvider';
 
-export default function TableBody({ tasks, displayAllTasks, setTasks, setTitleEdit, titleedit, setStatusEdit, statusedit }) {
-
+export default function TableBody({ displayAllTasks, setTitleEdit, titleedit, setStatusEdit, statusedit }) {
+    const [tasks, setTasks]=useContext(dataContext);
+  
   const [editedinput, setEditedInput] = useState('');
-
   const [bothEdit, setBothEdit] = useState(false);
-
   const changeCurrentvalue = (e, id) => {
     e.preventDefault();
     e.stopPropagation();

@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Filter from "../Filter/filters";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TableBody from "./tableBody";
+import { dataContext } from "../../context/dataContextProvider";
 
-export default function TaskTable({ tasks, setTasks, filterCritrea,  setFilterCritrea, searchResults }) {
+export default function TaskTable({filterCritrea,  setFilterCritrea, searchResults }) {
+    const [tasks, setTasks]=useContext(dataContext);
+  
   const [titleedit, setTitleEdit] = useState(null);
   const [isFilterPopup, SetIsFilterPopup]=useState(false);
   const [statusedit, setStatusEdit] = useState(null);
@@ -36,12 +39,12 @@ export default function TaskTable({ tasks, setTasks, filterCritrea,  setFilterCr
             </th>
             <th className="p-4 text-xl font-semibold text-left">Status
                   <FontAwesomeIcon icon={faFilter} className='cursor-pointer hover:text-blue-500 transition-colors ml-5' onClick={()=>SetIsFilterPopup(!isFilterPopup)}/>
-     <Filter options={["To do", "In progress", "Completed"]} isFilterPopup={isFilterPopup} SetIsFilterPopup={SetIsFilterPopup} tasks={tasks} setTasks={setTasks} optionValue={filterCritrea} setOptionValue={setFilterCritrea}/></th>
+     <Filter options={["To do", "In progress", "Completed"]} isFilterPopup={isFilterPopup} SetIsFilterPopup={SetIsFilterPopup} optionValue={filterCritrea} setOptionValue={setFilterCritrea}/></th>
             <th className=" text-xl font-semibold text-center">Priority</th>
             <th className="p-4 text-xl font-semibold text-left">Edit</th>
           </tr>
         </thead>
-          <TableBody tasks={tasks} setTasks={setTasks} displayAllTasks={displayAllTasks} titleedit={titleedit} setTitleEdit={setTitleEdit} statusedit={statusedit} setStatusEdit={setStatusEdit}/>
+          <TableBody displayAllTasks={displayAllTasks} titleedit={titleedit} setTitleEdit={setTitleEdit} statusedit={statusedit} setStatusEdit={setStatusEdit}/>
       </table>
     </div>
   )

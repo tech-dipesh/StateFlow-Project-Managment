@@ -1,11 +1,12 @@
 import TaskInput from "./TaskInput";
-import {useState} from "react"
+import {useContext, useState} from "react"
 import TaskTable from "./TaskTable"
 import useLocalStorage from "../../hooks/useLocalStorage.js";
 import Search from "../Filter/search.jsx";
 import Option from "../Filter/Option"
+import { dataContext } from "../../context/dataContextProvider.jsx";
 export default function Task() {
-  const [tasks, setTasks]=useLocalStorage('tasks', []);
+    const [tasks, setTasks]=useContext(dataContext);
 const [filterCritrea, setFilterCritrea]=useState();
 const [searchResults, setSearchResults] = useState(null);  
   return (
