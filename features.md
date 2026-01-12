@@ -123,9 +123,7 @@ Visual task duration
 Shows
 
 Data visualization skills
-
 Derived layout logic
-
 This is great if you like visual problems.
 
 🟣 5. Priority & Sorting System

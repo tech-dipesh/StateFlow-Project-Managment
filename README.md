@@ -23,6 +23,9 @@
   - i'm facing that it shows the object but it's the array which i'm unable to access the . property.  
   >:white_check_mark: I should pass the header comps to the main inside router not on the render.
     - Lot of error on the drag and drop.
+  - During convert to static to localStorage value, i've face lot of error on naming and the toLoweCase()
+  -  undo and redo of teh rest operator getting the last value from the array.
+
 
 # Features:
   - User input
@@ -39,6 +42,7 @@
   - Make Separate Drag and drop view.
   - Finally able to implement the drag and drop feature.
   - Also add like instant update with teh localstorage.
+  - For the undo and the redo operation, rather i've create the new history, i've get online that i can create teh three state of past, present and future based on that i can change it.
   
 
   
