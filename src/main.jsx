@@ -11,6 +11,7 @@ import Error from './Components/Common/Error';
 import List from './Components/List View/Task';
 import Board from './Components/Board View/Board';
 import Header from "./Components/Common/Header"
+import Practice from './Components/Undo Redo/practice.jsx';
 let router = createBrowserRouter([
 {
     path: "/",
@@ -25,6 +26,10 @@ let router = createBrowserRouter([
       {
         path: "/board",
         element: <Board/>
+      },
+      {
+        path: "practice",
+        element: <Practice/>
       }
     ]
   },

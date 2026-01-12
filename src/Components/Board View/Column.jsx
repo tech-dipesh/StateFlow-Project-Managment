@@ -12,8 +12,8 @@ export default function Column({tasks, column}) {
     <div className="flex w-80 flex-col rounded-lg border border-neutral-600 bg-neutral-800 p-4" ref={setNodeRef}>
       <h2 className="mb-4 font-semibold text-neutral-100">{column.title}</h2>
       <div className="flex flex-1 flex-col gap-4">
-        {tasks.map(tasks=>(
-          <TaskCard key={tasks.id} task={tasks}/>
+        {tasks.map(task=>(
+          <TaskCard key={task.id} task={task}/>
         ))}
       </div>
     </div>

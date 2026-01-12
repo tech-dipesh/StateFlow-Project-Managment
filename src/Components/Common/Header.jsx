@@ -8,6 +8,7 @@ export default function Header() {
         <li className='cursor-pointer'><NavLink to='/'>Home</NavLink></li>
         <li className='cursor-pointer'><NavLink to='/list'>List</NavLink></li>
         <li className='cursor-pointer'><NavLink to='/board'>Board</NavLink></li>
+        <li className='cursor-pointer'><NavLink to='/practice'>Practice</NavLink></li>
       </ul>
     </div>
   )

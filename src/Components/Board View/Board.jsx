@@ -12,9 +12,6 @@ const sensors = useSensors(
     keyboardSensor,
   );
   const [tasks, setTasks]=useContext(dataContext);
-  console.log("context is", tasks);  
-  
-
 
   const handleDragDnd=(e)=>{
       if (!e.over) return;

@@ -38,6 +38,8 @@
   - Implement the react router, as of now three router successfully created with also the header.
   - Make Separate Drag and drop view.
   - Finally able to implement the drag and drop feature.
+  - Also add like instant update with teh localstorage.
+  
 
   
   # Common Feature:
