@@ -11,6 +11,7 @@ export default function Practice() {
     const newValue = op === "+" ? present + 1 : present - 1;
   setPresent(newValue);
   }
+
   const undoOperation=()=>{
     if(past.length===0) return;
     setPresent(past[past.length-1]);
@@ -18,8 +19,9 @@ export default function Practice() {
     setFuture(prev=>[...prev, present]);
     setPast(removelastPast);
   }
-  
+
   const redoOperation=()=>{
+    if(future.length===0) return;
       setPast(prev=>[...prev, present]);
       setPresent(future[future.length-1]);
       const removeLastfromFuture=future.slice(0, -1);
@@ -29,8 +31,8 @@ export default function Practice() {
   return (
     <div>
       <div className="gap-5 m-12 flex justify-center align-middle">
-        <button className={style} onClick={undoOperation} >Undo</button>
-        <button className={style} onClick={redoOperation}>Redo</button>
+        <button className={style} onClick={undoOperation} disabled={past.length===0}>Undo</button>
+        <button className={style} onClick={redoOperation} disabled={future.length===0}>Redo</button>
         <button disabled className={style} >Reset</button>
       </div>
       <hr />
