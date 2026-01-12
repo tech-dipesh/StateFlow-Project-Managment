@@ -4,17 +4,14 @@ State management:
 - present: state4                  // current state
 - future: [state5, state6]         // for redo
 On UNDO:
-
 Move present → push to future
 Pop last item from past → becomes new present
 
 On REDO:
-
 Move present → push to past
 Pop last item from future → becomes new present
 
 On NEW ACTION:
-
 Move present → push to past
 Clear future (any redo history is invalidated)
 New state becomes present

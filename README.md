@@ -8,6 +8,12 @@
   
 
 
+# New Terminology that i've learned:
+- When we do: `arr.slice(0, -1)` it'll remove the last index value and return teh new value.
+- i've forgetten the syntax of: `parseInt` convert to the integar of string.
+
+
+
 # Some syntax that i've forgetten or issue that i've fixed which i myself fix.:
   - how to make the default value not showing or hiding on select option.
   - I've use the onSubmit instead of onClick on the form which trigger a problem.
@@ -25,6 +31,7 @@
     - Lot of error on the drag and drop.
   - During convert to static to localStorage value, i've face lot of error on naming and the toLoweCase()
   -  undo and redo of teh rest operator getting the last value from the array.
+- Have to face lot of erro on the undo and redo as it's my first times.
 
 
 # Features:
@@ -44,6 +51,10 @@
   - Also add like instant update with teh localstorage.
   - For the undo and the redo operation, rather i've create the new history, i've get online that i can create teh three state of past, present and future based on that i can change it.
   
+
+
+
+
 
   
   # Common Feature:
@@ -77,6 +88,16 @@
   - for accessing just wrap: const [value]=`dataContext`
    - Now i've implement the tasks, setTAsks and wrap everything to the context api.
    
+
+# First time undo redo mistakes and logic:
+  - for that we can make teh threee state: `past, present, future`,
+  - now for the undo, we take a value from the past, and store on present,
+  - for redo take from teh furutre on present and update
+  - for result add all 3.
+  - the present is sinlge value while past and future are multiple
+  - i've done lot of mistake during updation, have to look at teh 2 tutorial and someitmes google and also multiple times chatgpt if i'm being honest
+  - after 3rd try i'm able to get the depth but not fully about 70% get the knowdlge of how undo redo work, it's little bit complex for the beginner
+  - 
 
 # Library Used:
   - tailwindcss
