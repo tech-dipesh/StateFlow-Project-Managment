@@ -1,5 +1,7 @@
 import { useDraggable } from "@dnd-kit/core"
 import { CSS } from '@dnd-kit/utilities'
+import { dataContext } from "../../context/dataContextProvider";
+import { useContext } from "react";
 export default function TaskCard({task}) {
   const getDraggable=useDraggable({
     id: task.id
@@ -9,8 +11,8 @@ export default function TaskCard({task}) {
     transform: CSS.Translate.toString(transform)
   }
   return (
-    <div style={style} className='cursor-grab rounded-lg bg-neutral-700 p-4 shadow-sm hoer:shadow-md' ref={setNodeRef} {...listeners} {...attributes}>
-        <h4 className='mt-4'>{task.task}</h4>
+    <div style={style} className='cursor-grab rounded-lg border border-neutral-600 bg-neutral-700 p-4 shadow-sm hover:shadow-md transition-shadow' {...listeners} ref={setNodeRef} {...attributes}>
+        <h4 className='mt-4'>{task.title}</h4>
     </div>
   )
 }

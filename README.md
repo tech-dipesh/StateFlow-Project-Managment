@@ -35,11 +35,14 @@
   - Now i've also add the 
   - Can change the priority of task of easy, medium and hard, 
   - I've make the Option priotu more robusst add with the localStorage, each list
+  - Implement the react router, as of now three router successfully created with also the header.
   - Make Separate Drag and drop view.
   - Finally able to implement the drag and drop feature.
+
   
   # Common Feature:
     - Add the Loading state for just react router
+    
     - Also add the erorr page.
 
 

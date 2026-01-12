@@ -1,5 +1,7 @@
 import { useDroppable } from "@dnd-kit/core";
 import TaskCard from "./TaskCard";
+import { dataContext } from "../../context/dataContextProvider";
+import { useContext } from "react";
 
 export default function Column({tasks, column}) {
   const allNode=useDroppable({
@@ -7,7 +9,7 @@ export default function Column({tasks, column}) {
   })
   const {setNodeRef}=allNode
   return (
-    <div className="flex w-80 flex-col rounded-lg bg-neutral 800 p-4" ref={setNodeRef}>
+    <div className="flex w-80 flex-col rounded-lg border border-neutral-600 bg-neutral-800 p-4" ref={setNodeRef}>
       <h2 className="mb-4 font-semibold text-neutral-100">{column.title}</h2>
       <div className="flex flex-1 flex-col gap-4">
         {tasks.map(tasks=>(
