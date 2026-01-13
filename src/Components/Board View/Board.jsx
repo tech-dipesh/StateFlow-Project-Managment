@@ -17,6 +17,7 @@ const sensors = useSensors(
       if (!e.over) return;
     const taskId = e.active.id;
     const newStatus = e.over.id;
+      const currentTaskValue = tasks.find(t => t.id === taskId);
     setTasks(tasks.map(task => 
     task.id === taskId ? {...task, status: newStatus} : task
   ));

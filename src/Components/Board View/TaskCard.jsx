@@ -12,7 +12,6 @@ export default function TaskCard({task}) {
   const style={
     transform: CSS.Translate.toString(transform)
   }
-  console.log(task.status);
   return (
     <div style={style} className={`cursor-grab rounded-lg border border-neutral-600 ${task.status=="TODO"? 'bg-gray-500': task.status=="IN PROGRESS"?'bg-gray-400':'bg-blue-500'} p-4 shadow-sm hover:shadow-md transition-shadow`} {...listeners} ref={setNodeRef} {...attributes}>
         <h4 className='mt-4 flex justify-center align-middle'>{task.title}

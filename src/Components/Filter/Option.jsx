@@ -19,7 +19,7 @@ export default function Option({id, urgency}) {
   return (
     <div className='relative w-56'>
       <button onClick={()=>setoption(!option)} className='w-full px-4 py-3 bg-gray-800 text-white rounded-lg border-2 border-blue-500 flex items-center justify-between cursor-pointer'>
-        {selectOption} 
+        {selectOption}
           <span><FontAwesomeIcon icon={selectThatOption[0]?.icon}/></span>
       </button>
       {option && 
@@ -31,7 +31,7 @@ export default function Option({id, urgency}) {
     setSelectOption(option.priority)
     setTasks(tasks.map(task=>
          task.id===id ?{...task, priority: option.priority}: task))      
-  }} 
+  }}
            key={option.color}>
            {option.priority} <span><FontAwesomeIcon icon={option.icon} /></span>
             </button>

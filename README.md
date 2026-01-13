@@ -11,6 +11,7 @@
 # New Terminology that i've learned:
 - When we do: `arr.slice(0, -1)` it'll remove the last index value and return teh new value.
 - i've forgetten the syntax of: `parseInt` convert to the integar of string.
+- Nullis cohersion i've forgetten: `val ?? 9` mean if val is undefined/null use 9 o r else use val.
 
 
 
@@ -32,7 +33,8 @@
   - During convert to static to localStorage value, i've face lot of error on naming and the toLoweCase()
   -  undo and redo of teh rest operator getting the last value from the array.
 - Have to face lot of erro on the undo and redo as it's my first times.
-
+- - During the drag and drop from practice to real implementation: `min-h-screen-` causing my buttons to not showing up.
+  
 
 # Features:
   - User input
@@ -50,8 +52,10 @@
   - Finally able to implement the drag and drop feature.
   - Also add like instant update with teh localstorage.
   - For the undo and the redo operation, rather i've create the new history, i've get online that i can create teh three state of past, present and future based on that i can change it.
+  - IMplement the undo, redo feateure on teh 13/1, also make the custom hooks for that, with lot of error.
   
 
+    
 
 
 
