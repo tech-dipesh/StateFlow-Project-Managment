@@ -12,6 +12,7 @@ import List from './Components/List View/Task';
 import Board from './Components/Board View/Board';
 import Header from "./Components/Common/Header"
 import Practice from './Components/Undo Redo/practice.jsx';
+import Keyboardshortcut from './Components/Common/keyboard-shortcut.jsx';
 let router = createBrowserRouter([
 {
     path: "/",
@@ -28,8 +29,12 @@ let router = createBrowserRouter([
         element: <Board/>
       },
       {
-        path: "practice",
+        path: "/practice",
         element: <Practice/>
+      },
+      {
+        path: "/shortcut",
+        element: <Keyboardshortcut/>
       }
     ]
   },

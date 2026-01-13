@@ -53,8 +53,16 @@
   - Also add like instant update with teh localstorage.
   - For the undo and the redo operation, rather i've create the new history, i've get online that i can create teh three state of past, present and future based on that i can change it.
   - IMplement the undo, redo feateure on teh 13/1, also make the custom hooks for that, with lot of error.
-  
+  - Start implementing keyword shortcut for the project.
 
+  
+  
+  # My Own Usage that i can use on coming days.
+  - I've make one Input, and button which are mostly used my own style:
+    - Button: `opacitiy-85 cursor-pointer bg-blue-500 font-semibold  py-2 px-4 rounded m-2`
+    - Input: `bg-transparent h-10 w-72 rounded-lg text-black placeholder-transparent ring-2 px-2 ring-gray-500 focus:ring-sky-600 focus:outline-none`
+  - Instead of `gap-4` that we do on child element instead we should give: `space-4`
+  
     
 
 
