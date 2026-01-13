@@ -1,45 +1,22 @@
 import React, { useState } from 'react'
+import useUndoRedo from '../../hooks/useUndoRedo';
 const style = 'cursor-pointer bg-gray-800 rounded-xs p-2 hover:font-semibold ';
 
 export default function Practice() {
-  const [past, setPast] = useState([])
-  const [present, setPresent] = useState(0);
-  const [future, setFuture] = useState([])
-  const updateResult = (e, op) => {
-    setPast(prev=>[...prev, present]);
-    setFuture([])
-    const newValue = op === "+" ? present + 1 : present - 1;
-  setPresent(newValue);
-  }
-
-  const undoOperation=()=>{
-    if(past.length===0) return;
-    setPresent(past[past.length-1]);
-    const removelastPast=past.slice(0, -1);
-    setFuture(prev=>[...prev, present]);
-    setPast(removelastPast);
-  }
-
-  const redoOperation=()=>{
-    if(future.length===0) return;
-      setPast(prev=>[...prev, present]);
-      setPresent(future[future.length-1]);
-      const removeLastfromFuture=future.slice(0, -1);
-      setFuture(removeLastfromFuture);
-  }
+  const {present, past, future, updateResult, undoOperation, redoOperation}=useUndoRedo([]);
 
   return (
     <div>
       <div className="gap-5 m-12 flex justify-center align-middle">
         <button className={style} onClick={undoOperation} disabled={past.length===0}>Undo</button>
         <button className={style} onClick={redoOperation} disabled={future.length===0}>Redo</button>
-        <button disabled className={style} >Reset</button>
+        <button disabled className={style} onClick={()=>updateResult([])}>Reset</button>
       </div>
       <hr />
       <div className="flex justify-center my-10 gap-10 align-middle">
-        <button className={style} onClick={(e)=>updateResult(e, '+')}>+1</button>
-        <h1 className='text-white bg-blue-700 p-5 cursor-pointer'>{present}</h1>
-        <button className={style} onClick={(e)=>updateResult(e, '-')}>-1</button>
+        <button className={style} onClick={(e)=>updateResult([...present, 'new item'])}>Add array</button>
+        <h1 className='text-white bg-blue-700 p-5 cursor-pointer'>{JSON.stringify(present)}</h1>
+        <button className={style} onClick={(e)=>updateResult(present.slice(0, -1))}>Remove array</button>
             </div>
         <table className='flex justify-center border-2'>
           <thead>
@@ -52,7 +29,7 @@ export default function Practice() {
           <tbody>
             {past.map(p => (
               <tr>
-                <td>{p}</td>
+                <td key={p}>{p}</td>
               </tr>
             ))}
           </tbody>
