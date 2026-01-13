@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext} from "react";
 import { closestCorners, DndContext, KeyboardSensor, MouseSensor, TouchSensor, useSensor, useSensors } from "@dnd-kit/core";
 import {dataContext} from "../../context/dataContextProvider"
 import Columns from "./Columns";
@@ -11,7 +11,7 @@ const sensors = useSensors(
     touchSensor,
     keyboardSensor,
   );
-  const [tasks, setTasks]=useContext(dataContext);
+  const {tasks, setTasks}=useContext(dataContext);
 
   const handleDragDnd=(e)=>{
       if (!e.over) return;

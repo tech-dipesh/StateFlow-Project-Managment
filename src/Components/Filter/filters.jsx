@@ -1,22 +1,11 @@
 import { faFilter } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import filterIcon from "../../assets/filter.png"
-import { useContext, useState } from 'react'
-import { dataContext } from '../../context/dataContextProvider';
-export default function Filter({ options, isFilterPopup, SetIsFilterPopup, optionValue, setOptionValue}) {
-    const [tasks, setTasks]=useContext(dataContext);
-  
+import { useState } from 'react';
+export default function Filter({ options, isFilterPopup, SetIsFilterPopup, setOptionValue}) {
   const [selectOption, setSelectoption]=useState(null);
 
   const clickFilter = () => {
-    // SetIsFilterPopup(!isFilterPopup)
-    // // const allOptions=
-    // const BelongThatOption=tasks.filter(f=>{
-    //   return f.status.toLowerCase()===optionValue.toLowerCase();
-    // })
-    // console.log("option value is", optionValue);
-    // setOptionValue(BelongThatOption)
-    // console.log("Belong that option is", optionValue);
     setSelectoption(null)
       SetIsFilterPopup(false)
   }

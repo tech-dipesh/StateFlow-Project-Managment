@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faCaretUp, faGripLines } from '@fortawesome/free-solid-svg-icons';
 import { dataContext } from '../../context/dataContextProvider';
 export default function Option({id, urgency}) {
-    const [tasks, setTasks]=useContext(dataContext);
+    const {tasks, setTasks}=useContext(dataContext);
   
   const [option, setoption]=useState(false);
   const [selectOption, setSelectOption]=useState(urgency)
@@ -15,12 +15,7 @@ export default function Option({id, urgency}) {
   ]
 
   const selectThatOption=allOptions.filter(f=>f.priority===selectOption)
-  const changePriorityOption=()=>{
-    setoption(!option);
-    setSelectOption(option.priority)
-    const findthatTaskList=tasks.find(task=>task.id===id);
-    console.log(findthatTaskList);
-  }
+
   return (
     <div className='relative w-56'>
       <button onClick={()=>setoption(!option)} className='w-full px-4 py-3 bg-gray-800 text-white rounded-lg border-2 border-blue-500 flex items-center justify-between cursor-pointer'>

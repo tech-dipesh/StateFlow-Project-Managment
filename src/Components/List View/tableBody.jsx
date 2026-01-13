@@ -3,7 +3,7 @@ import Option from '../Filter/Option';
 import { dataContext } from '../../context/dataContextProvider';
 
 export default function TableBody({ displayAllTasks, setTitleEdit, titleedit, setStatusEdit, statusedit }) {
-    const [tasks, setTasks]=useContext(dataContext);
+    const {tasks, setTasks}=useContext(dataContext);
   
   const [editedinput, setEditedInput] = useState('');
   const [bothEdit, setBothEdit] = useState(false);

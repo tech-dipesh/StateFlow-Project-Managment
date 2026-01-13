@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { dataContext } from '../../context/dataContextProvider';
 
 export default function TaskInput() {
-    const [, setTasks]=useContext(dataContext);
+    const {setTasks}=useContext(dataContext);
   
   const [data, setData]=useState({
     title: '',status: '', priority: '', id: '',

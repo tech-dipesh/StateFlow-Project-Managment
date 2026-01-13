@@ -6,7 +6,7 @@ import TableBody from "./tableBody";
 import { dataContext } from "../../context/dataContextProvider";
 
 export default function TaskTable({filterCritrea,  setFilterCritrea, searchResults }) {
-    const [tasks, setTasks]=useContext(dataContext);
+  const {tasks, setTasks}=useContext(dataContext);
   
   const [titleedit, setTitleEdit] = useState(null);
   const [isFilterPopup, SetIsFilterPopup]=useState(false);
