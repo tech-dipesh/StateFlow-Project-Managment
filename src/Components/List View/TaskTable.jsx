@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import Filter from "../Filter/filters";
-import { faFilter } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faEllipsis, faFilter } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TableBody from "./tableBody";
 import { dataContext } from "../../context/dataContextProvider";
@@ -18,7 +18,7 @@ export default function TaskTable({filterCritrea,  setFilterCritrea, searchResul
   : tasks;
 
   return (
-    <div className="h-3/4 flex flex-col items-center overflow-auto p-8">
+    <div className="h-5/6 flex flex-col items-center overflow-auto p-4">
       <h1 className="text-3xl">Task Table</h1>
       <table className="w-full max-w-5xl border-collapse border-2 border-gray-300"
         onClick={(e) => {
@@ -42,6 +42,7 @@ export default function TaskTable({filterCritrea,  setFilterCritrea, searchResul
      <Filter options={["To do", "In progress", "Completed"]} isFilterPopup={isFilterPopup} SetIsFilterPopup={SetIsFilterPopup} optionValue={filterCritrea} setOptionValue={setFilterCritrea}/></th>
             <th className=" text-xl font-semibold text-center">Priority</th>
             <th className="p-4 text-xl font-semibold text-left">Edit</th>
+            <th className="p-4 text-xl font-semibold text-left">Manage</th>
           </tr>
         </thead>
           <TableBody displayAllTasks={displayAllTasks} titleedit={titleedit} setTitleEdit={setTitleEdit} statusedit={statusedit} setStatusEdit={setStatusEdit}/>

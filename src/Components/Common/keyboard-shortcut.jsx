@@ -8,7 +8,7 @@ import { createPortal } from 'react-dom'
       { key: 'k', useCase: 'Search List' },
       { key: 'b', useCase: 'Open Board' },
       { key: 'l', useCase: 'Open List' },
-      { key: 'h', useCase: 'Go To Homepage' },
+      { key: 'v', useCase: 'Go To Homepage' },
       { key: 'd', useCase: 'Delete Selected Item' },
       { key: 'z', useCase: 'Undo Action' },
       { key: 'y', useCase: 'Redo Action' },
@@ -29,12 +29,12 @@ import { createPortal } from 'react-dom'
               icon={faMagnifyingGlass}  className='absolute left-2xl top-32 text-gray-400 '/>
             <input type="text" className="bg-gray-100 h-10 w-full rounded-lg text-gray-700 px-10 border border-gray-300 focus:outline-none focus:border-gray-400" placeholder='Search Shortcut' />
           </div>
-          <div className='space--y-2'>
+          <div className='space--y-2' onClick={(e)=>e.stopPropagation()}>
             {allCommand.map(command => (
               <div className='flex justify-between items-center py-2' key={command.key}>
               <div className='text-black text-sm'>{command.useCase}</div>
               <div className='flex gap-2 items-center text-xl '>
-                  <FontAwesomeIcon icon={faUpLong} className='text-sm text-gray-500 bg-gray-100'/>
+                  <FontAwesomeIcon icon={faUpLong} className='text-sm text-gray-500 bg-gray-100 p-2'/>
                   <div className='px-3 py-1 border border-gray-300 rounded bg-gray-100 text-sm font-medium'> {command.key}</div>
               </div>
               </div>

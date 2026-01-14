@@ -34,6 +34,11 @@
   -  undo and redo of teh rest operator getting the last value from the array.
 - Have to face lot of erro on the undo and redo as it's my first times.
 - - During the drag and drop from practice to real implementation: `min-h-screen-` causing my buttons to not showing up.
+  ## More Error tha i'm facing:
+    - i've used: `        redirect("/board")` which is not correct for redirect during the keyword shortcut.
+    - i don't have to write the if: `if(e.ctrlKey==true)` as it's boolean it work without the true.
+    - 
+
   
 
 # Features:
@@ -54,7 +59,7 @@
   - For the undo and the redo operation, rather i've create the new history, i've get online that i can create teh three state of past, present and future based on that i can change it.
   - IMplement the undo, redo feateure on teh 13/1, also make the custom hooks for that, with lot of error.
   - Start implementing keyword shortcut for the project.
-
+  - almost implement half of keyword shortcuts.
   
   
   # My Own Usage that i can use on coming days.
