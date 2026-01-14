@@ -6,9 +6,9 @@ import Option from "../Filter/Option"
 import { dataContext } from "../../context/dataContextProvider.jsx";
 import Undoredo from "../Common/undoRedo.jsx";
 export default function Task() {
-    const {tasks, setTasks}=useContext(dataContext);
-const [filterCritrea, setFilterCritrea]=useState();
-const [searchResults, setSearchResults] = useState(null);  
+  const {tasks, setTasks}=useContext(dataContext);
+  const [filterCritrea, setFilterCritrea]=useState();
+  const [searchResults, setSearchResults] = useState(null);  
   return (
     <div className="min-h-screen">
       <TaskInput setTasks={setTasks}/>

@@ -61,10 +61,7 @@
   - I've make one Input, and button which are mostly used my own style:
     - Button: `opacitiy-85 cursor-pointer bg-blue-500 font-semibold  py-2 px-4 rounded m-2`
     - Input: `bg-transparent h-10 w-72 rounded-lg text-black placeholder-transparent ring-2 px-2 ring-gray-500 focus:ring-sky-600 focus:outline-none`
-  - Instead of `gap-4` that we do on child element instead we should give: `space-4`
-  
-    
-
+  - Instead of `gap-4` that we do on child element instead we should give: `space-4`    
 
 
 
@@ -109,7 +106,14 @@
   - the present is sinlge value while past and future are multiple
   - i've done lot of mistake during updation, have to look at teh 2 tutorial and someitmes google and also multiple times chatgpt if i'm being honest
   - after 3rd try i'm able to get the depth but not fully about 70% get the knowdlge of how undo redo work, it's little bit complex for the beginner
-  - 
+  
+
+  # Portal:
+    - When we're tyring to make teh popup feature on the react, we cna wrap everything on teh header or somehitng within it, but it's not the best, as the z index and teh position absolute parent can't be override by children
+    - we use the `createPortal` that provided by react-dom
+    - We will be create  new id beside teh #root on html, and append our popup there.
+    - Now we return the `createPortal` with wrap them on the `portal` dom id.
+    
 
 # Library Used:
   - tailwindcss
