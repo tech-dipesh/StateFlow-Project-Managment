@@ -13,6 +13,7 @@ import Board from './Components/Board View/Board';
 import Header from "./Components/Common/Header"
 import Practice from './Components/Undo Redo/practice.jsx';
 import Keyboardshortcut from './Components/Common/keyboard-shortcut.jsx';
+import Home from './Home/Home.jsx';
 let router = createBrowserRouter([
 {
     path: "/",
@@ -20,6 +21,10 @@ let router = createBrowserRouter([
     // loader: <Loader/>,
     errorElement: <Error/>,
     children: [
+      {
+        index: true,
+        element: <Home/>
+      },
       {
         path: "/list",
         element:  <List/>
