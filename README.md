@@ -37,7 +37,8 @@
   ## More Error tha i'm facing:
     - i've used: `        redirect("/board")` which is not correct for redirect during the keyword shortcut.
     - i don't have to write the if: `if(e.ctrlKey==true)` as it's boolean it work without the true.
-    - 
+    - Also the index of showing homepage, which i've not make index of app.
+    
 
   
 

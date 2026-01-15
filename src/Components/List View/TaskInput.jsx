@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { dataContext } from '../../context/dataContextProvider';
 
-export default function TaskInput() {
+export default function TaskInput({isInput}) {
     const {setTasks}=useContext(dataContext);
   
   const [data, setData]=useState({
@@ -21,7 +21,7 @@ export default function TaskInput() {
   }
   return (
     <div className='h-1/4 flex items-center justify-center mt-5'>
-    <div className=''>
+      {isInput && 
       <form onSubmit={submitForm}>
       <input type="text" placeholder='Please Enter your task.' name='title' onChange={(e)=>setData((prev)=>({...prev, title: e.target.value}))} value={data.title}/>
       <select name="status" className='cursor-pointer' onChange={(e)=>setData((prev)=>({...prev, status: e.target.value}))} value={data.status}>
@@ -32,8 +32,8 @@ export default function TaskInput() {
       </select>
       <input className='pointer bg-gray-600 cursor-pointer p-2 rounded-xl' type="submit" value='Submit'/>
       </form>
+  }
     <h1 className='text-red-500 text-5xl '>{error && 'Please Enter all inputs.'}</h1>
-    </div>
     </div>
   )
 }

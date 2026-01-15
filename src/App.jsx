@@ -8,6 +8,7 @@ import { data, Outlet } from 'react-router'
 import Board from './Components/Board View/Board'
 import DataContextProvider, { dataContext } from './context/dataContextProvider'
 import Keyword from './Home/keyword'
+import Home from './Home/Home'
 function App() {
   const [isPopup, setIsPopup]=useState(false);
   return (
