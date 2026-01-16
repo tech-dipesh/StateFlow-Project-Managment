@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CardTaskMenu from './cardTasksMenu';
 
 export default function TableBody({ displayAllTasks, setTitleEdit, titleedit, setStatusEdit, statusedit }) {
-    const {tasks, setTasks}=useContext(dataContext);
+  const {tasks, setTasks}=useContext(dataContext);
   
   const [editedinput, setEditedInput] = useState('');
   const [bothEdit, setBothEdit] = useState(false);
@@ -48,7 +48,9 @@ export default function TableBody({ displayAllTasks, setTitleEdit, titleedit, se
   return (
     <tbody>
       {displayAllTasks.length == 0 ? (
-        <tr className='p-4 text-blue-500 flex justify-center col-span-3 text-2xl font-semibold'>The List is empty.</tr>
+      <tr>
+        <td colSpan={8} className='p-4 text-3xl text-red-500 font-semibold text-center'>The List is empty.</td>
+     </tr>
       ) :
         (displayAllTasks.map((task) => (
           <tr key={task.id} className="border-b border-gray-200 hover:bg-gray-50">

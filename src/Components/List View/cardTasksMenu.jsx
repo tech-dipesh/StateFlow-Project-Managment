@@ -13,6 +13,7 @@ export default function CardTaskMenu({bothEdit, bothEditFeature, task, tasks, se
   <>
   <td className='p-2 w-64'>
     <Option setTasks={setTasks} id={task.id} tasks={tasks} urgency={task.priority}/></td>
+    <td>{task.date=='' ? 'null': `${task.date}`}</td>
       <td className="w-5">
         <button onClick={(e) => bothEditFeature(e, task)} className="p-2 m-2 bg-blue-400 rounded-xs cursor-pointer">{bothEdit === false ? 'Edit' : 'Save'}</button>
         </td>

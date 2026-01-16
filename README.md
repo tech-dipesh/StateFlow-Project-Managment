@@ -40,7 +40,7 @@
     - Also the index of showing homepage, which i've not make index of app.
     - The Stylying prolbem of the elipssis menu delete
     - the main problemm is on when i make the updateResult, the currentValue is not guarented too be teh array so i then check it fix now.
-    
+    - The colspan problem of not coming to the center of teh page when list is empty.
 
 
   
@@ -67,7 +67,10 @@
    - Implemen the full keyword shortcut: 01/16
   - Also add the menu eplipsis  with the delete feature.
   - User can creaet the new task with the button by default it'll not show the input page.
-  - 
+  - Adding the Deadline Date which will become the optional 
+  - Write the custom message for the user new TaskInput.
+  - Make center of page of colspan when length is 0
+  
   
   # My Own Usage that i can use on coming days.
   - I've make one Input, and button which are mostly used my own style:

@@ -6,22 +6,27 @@ export default function TaskInput({isInput}) {
     const {setTasks}=useContext(dataContext);
   
   const [data, setData]=useState({
-    title: '',status: '', priority: '', id: '',
+    title: '',status: '', priority: 'Medium', date: '', id: '',
   });
-  const [error, setError]=useState(false);
+  const [error, setError]=useState('');
   const submitForm=(e)=>{
     e.preventDefault();
-    if(!(data.title) || !(data.status)){
-      setError(true)
-      return;
+    if(!(data.title)){
+        setError("Please Enter the Title");
+        return;
+    }
+    if(!(data.status)){
+        setError("Please Select any status.");
+        return;
     }
     const newTaskWithId={...data, id: crypto.randomUUID()};
     setTasks((prev)=>[...prev, newTaskWithId])
     setError(false)
+    console.log("new data is", data);
     setData({title: '', status: '', priority: ''})
   }
   return (
-    <div className='h-1/4 flex items-center justify-center mt-5'>
+    <div className='h-1/4 grid items-center justify-center mt-5'>
       {isInput && 
       <form onSubmit={submitForm} className='max-w-4xl flex items-center gap-4'>
       <input type="text" placeholder='Please Enter your task.' name='title' onChange={(e)=>setData((prev)=>({...prev, title: e.target.value}))} value={data.title}/>
@@ -31,11 +36,11 @@ export default function TaskInput({isInput}) {
         <option name='inprogress'>In Progress</option>
         <option name='Completed'>Completed</option>
       </select>
-      <Date/>
+      <Date setData={setData}/>
       <input className='pointer bg-gray-600 cursor-pointer p-2 rounded-xl' type="submit" value='Submit'/>
       </form>
   }
-    <h1 className='text-red-500 text-5xl '>{error && 'Please Enter all inputs.'}</h1>
+    <h1 className='text-red-500 text-5xl '>{error.length>0 && `${error}`}</h1>
     </div>
   )
 }
