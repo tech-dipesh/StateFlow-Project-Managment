@@ -38,7 +38,9 @@
     - i've used: `        redirect("/board")` which is not correct for redirect during the keyword shortcut.
     - i don't have to write the if: `if(e.ctrlKey==true)` as it's boolean it work without the true.
     - Also the index of showing homepage, which i've not make index of app.
+    - The Stylying prolbem of the elipssis menu delete
     
+
 
   
 
@@ -60,8 +62,11 @@
   - For the undo and the redo operation, rather i've create the new history, i've get online that i can create teh three state of past, present and future based on that i can change it.
   - IMplement the undo, redo feateure on teh 13/1, also make the custom hooks for that, with lot of error.
   - Start implementing keyword shortcut for the project.
-  - almost implement half of keyword shortcuts.
-  
+  - Have the keyword shortcut cheatlist on the separate comps, user can go on that, with teh control+? or header bar option.
+   - Implemen the full keyword shortcut: 01/16
+  - Also add the menu eplipsis  with the delete feature.
+  - User can creaet the new task with the button by default it'll not show the input page.
+  - 
   
   # My Own Usage that i can use on coming days.
   - I've make one Input, and button which are mostly used my own style:
@@ -74,7 +79,6 @@
   
   # Common Feature:
     - Add the Loading state for just react router
-    
     - Also add the erorr page.
 
 
@@ -124,8 +128,10 @@
 # Library Used:
   - tailwindcss
   - fontawesome
+  - react-router
   - dnd-kit/core (for the drag and drop feature)
-  - 
+  - reac-date-picker
+  
 
 
 # >:warning: When it says infinite renreder it mainly due to the infinite render or not wrap oout setter method on the useEffect, 

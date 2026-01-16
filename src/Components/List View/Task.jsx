@@ -1,4 +1,4 @@
-import TaskInput from "./TaskInput";
+import TaskInput from "../Input/TaskInput";
 import {useContext, useState} from "react"
 import TaskTable from "./TaskTable"
 import Search from "../Filter/search.jsx";

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { dataContext } from '../../context/dataContextProvider';
+import Date from './Date';
 
 export default function TaskInput({isInput}) {
     const {setTasks}=useContext(dataContext);
@@ -22,7 +23,7 @@ export default function TaskInput({isInput}) {
   return (
     <div className='h-1/4 flex items-center justify-center mt-5'>
       {isInput && 
-      <form onSubmit={submitForm}>
+      <form onSubmit={submitForm} className='max-w-4xl flex items-center gap-4'>
       <input type="text" placeholder='Please Enter your task.' name='title' onChange={(e)=>setData((prev)=>({...prev, title: e.target.value}))} value={data.title}/>
       <select name="status" className='cursor-pointer' onChange={(e)=>setData((prev)=>({...prev, status: e.target.value}))} value={data.status}>
         <option hidden name='status'>Change Status</option>
@@ -30,7 +31,8 @@ export default function TaskInput({isInput}) {
         <option name='inprogress'>In Progress</option>
         <option name='Completed'>Completed</option>
       </select>
-      <input className='pointer bg-gray-600 cursor-pointer p-2 rounded-xl' type="submit" value='Submit'/>
+      <Date/>
+      <input className='pointer bg-blue-500 cursor-pointer p-2 rounded-xl' type="submit" value='Submit'/>
       </form>
   }
     <h1 className='text-red-500 text-5xl '>{error && 'Please Enter all inputs.'}</h1>
