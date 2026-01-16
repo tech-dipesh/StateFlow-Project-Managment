@@ -16,9 +16,9 @@ export default function Keyword({setIsPopup, isPopup}) {
       if(e.key=="z" && e.ctrlKey===true){
         redo()
       }
-      if(e.key=="k" && e.ctrlKey===true){
-        redo()
-      }
+      // if(e.key=="k" && e.ctrlKey===true){
+      //   redo()
+      // }
       if(e.key=="b" && e.ctrlKey){
         navigate("/board")
       }

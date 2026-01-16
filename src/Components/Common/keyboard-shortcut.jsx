@@ -5,16 +5,16 @@ import { createPortal } from 'react-dom'
   export default function Keyboardshortcut({isPopup, setIsPopup}) {
     const allCommand = [
       { key: '?', useCase: 'Open Keyword Shortcut' },
-      { key: 'k', useCase: 'Search List' },
+      // { key: 'k', useCase: 'Search List' },
       { key: 'b', useCase: 'Open Board' },
       { key: 'l', useCase: 'Open List' },
       { key: 'v', useCase: 'Go To Homepage' },
-      { key: 'd', useCase: 'Delete Selected Item' },
+      // { key: 'd', useCase: 'Delete Selected Item' },
       { key: 'z', useCase: 'Undo Action' },
       { key: 'y', useCase: 'Redo Action' },
-      { key: 'f', useCase: 'Focus on search bar' },
+      // { key: 'f', useCase: 'Focus on search bar' },
       { key: 'Esc', useCase: "Close Any Option if the've selected" },
-      { key: 'n', useCase: "Create Issue" },
+      // { key: 'n', useCase: "Create Issue" },
     ]
 
     return createPortal(
