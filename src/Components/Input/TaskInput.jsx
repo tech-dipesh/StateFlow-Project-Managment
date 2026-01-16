@@ -32,7 +32,7 @@ export default function TaskInput({isInput}) {
         <option name='Completed'>Completed</option>
       </select>
       <Date/>
-      <input className='pointer bg-blue-500 cursor-pointer p-2 rounded-xl' type="submit" value='Submit'/>
+      <input className='pointer bg-gray-600 cursor-pointer p-2 rounded-xl' type="submit" value='Submit'/>
       </form>
   }
     <h1 className='text-red-500 text-5xl '>{error && 'Please Enter all inputs.'}</h1>

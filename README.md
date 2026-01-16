@@ -39,6 +39,7 @@
     - i don't have to write the if: `if(e.ctrlKey==true)` as it's boolean it work without the true.
     - Also the index of showing homepage, which i've not make index of app.
     - The Stylying prolbem of the elipssis menu delete
+    - the main problemm is on when i make the updateResult, the currentValue is not guarented too be teh array so i then check it fix now.
     
 
 

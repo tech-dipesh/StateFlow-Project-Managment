@@ -7,9 +7,11 @@ export default function useUndoRedo(initialValue) {
 
     const updateResult = (newValue) => {
       setPresent(curr=>{
-        if(newValue===curr) return;
-        setPast(prev=>[...prev, curr])
-        return newValue;
+         const currentValue = Array.isArray(curr) ? curr : [];
+        const actual = typeof newValue === 'function' ? newValue(currentValue) : newValue;
+        if(newValue===currentValue) return currentValue;
+        setPast(prev=>[...prev, currentValue])
+        return actual;
       })
       setFuture([])
     }
