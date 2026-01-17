@@ -11,9 +11,10 @@ import Error from './Components/Common/Error';
 import List from './Components/List View/Task';
 import Board from './Components/Board View/Board';
 import Header from "./Components/Common/Header"
-import Practice from './Components/Undo Redo/practice.jsx';
+import Practice from './Components/Practice/practice.jsx';
 import Keyboardshortcut from './Components/Common/keyboard-shortcut.jsx';
 import Home from './Home/Home.jsx';
+import Chart from './Components/Chart/Chart.jsx';
 let router = createBrowserRouter([
 {
     path: "/",
@@ -36,6 +37,10 @@ let router = createBrowserRouter([
       {
         path: "/practice",
         element: <Practice/>
+      },
+      {
+        path: "/chart",
+        element: <Chart/>
       },
       {
         path: "/shortcut",

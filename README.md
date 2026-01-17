@@ -41,7 +41,7 @@
     - The Stylying prolbem of the elipssis menu delete
     - the main problemm is on when i make the updateResult, the currentValue is not guarented too be teh array so i then check it fix now.
     - The colspan problem of not coming to the center of teh page when list is empty.
-
+    - During the sorting data problem, i've face a problem of not able to implement the sort by relevelancee, means go to the previous stage, which i done with the take temp variable and print that modify that not original.
 
   
 
@@ -70,8 +70,12 @@
   - Adding the Deadline Date which will become the optional 
   - Write the custom message for the user new TaskInput.
   - Make center of page of colspan when length is 0
+  - Add the Deadline time, feature to the project"
+  - Implement the Sorting feature with Ascending, Descending, Default and the Deadline, with take another temporary variable where we use: `displayAllTasks` and if default is do nothing else, just spread the original data and sort that.
+  - Also add the more sort by of, Priority, Status.
   
-  
+
+
   # My Own Usage that i can use on coming days.
   - I've make one Input, and button which are mostly used my own style:
     - Button: `opacitiy-85 cursor-pointer bg-blue-500 font-semibold  py-2 px-4 rounded m-2`
@@ -134,8 +138,10 @@
   - fontawesome
   - react-router
   - dnd-kit/core (for the drag and drop feature)
-  - reac-date-picker
-  
+  - react-date-picker
+  - react-select
+  - chroma-js
+  - 
 
 
 # >:warning: When it says infinite renreder it mainly due to the infinite render or not wrap oout setter method on the useEffect, 

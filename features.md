@@ -72,7 +72,6 @@ Hard, but very impressive.
 3. **React-table** (if using table component)
 
 **Core concept:** Store priority value, create sorting function that combines multiple fields, persist sort state.
-
 ---
 
 ## **Tags/Labels System**

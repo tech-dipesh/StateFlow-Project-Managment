@@ -9,6 +9,7 @@ export default function Header({isPopup, setIsPopup}) {
         <li className='cursor-pointer'><NavLink to='/list'>List</NavLink></li>
         <li className='cursor-pointer'><NavLink to='/board'>Board</NavLink></li>
         <li className='cursor-pointer'><NavLink to='/practice'>Practice</NavLink></li>
+        <li className='cursor-pointer'><NavLink to='/chart'>Chart</NavLink></li>
         <li className='cursor-pointer' onClick={()=>setIsPopup(!isPopup)}>
           {/* <NavLink to='/shortcut'>Shortcut</NavLink> */}
           Shortcut

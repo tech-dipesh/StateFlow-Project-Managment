@@ -23,7 +23,7 @@ export default function TaskInput({isInput}) {
     setTasks((prev)=>[...prev, newTaskWithId])
     setError(false)
     console.log("new data is", data);
-    setData({title: '', status: '', priority: ''})
+    setData({title: '', status: '', priority: '', date: ''})
   }
   return (
     <div className='h-1/4 grid items-center justify-center mt-5'>
