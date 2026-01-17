@@ -18,7 +18,7 @@ export default function Task() {
       <TaskInput setTasks={setTasks} isInput={isInput}/>
       <Search tasks={tasks} setTasks={setTasks} filterCritrea={filterCritrea} setFilterCritrea={setFilterCritrea} setSearchResults={setSearchResults}/>
       <TaskTable tasks={tasks} setTasks={setTasks} filterCritrea={filterCritrea} setFilterCritrea={setFilterCritrea} searchResults={searchResults}/>
-      <button className="left-60 relative opacitiy-85 cursor-pointer bg-blue-500 font-semibold  py-2 px-4 rounded m-2" onClick={()=>setIsInput(!isInput)}><FontAwesomeIcon icon={faPlus}/>Create</button>
+      <button className="left-35 relative opacitiy-85 cursor-pointer bg-blue-500 font-semibold py-2 px-4 rounded  mt-24" onClick={()=>setIsInput(!isInput)}><FontAwesomeIcon icon={faPlus}/>Create</button>
       <Undoredo/>
     </div>
   )

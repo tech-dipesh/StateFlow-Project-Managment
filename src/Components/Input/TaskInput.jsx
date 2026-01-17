@@ -6,7 +6,7 @@ export default function TaskInput({isInput}) {
     const {setTasks}=useContext(dataContext);
   
   const [data, setData]=useState({
-    title: '',status: '', priority: 'Medium', date: '', id: '',
+    title: '',status: '', priority: 'Medium', date: '', Labels: [], id: '',
   });
   const [error, setError]=useState('');
   const submitForm=(e)=>{

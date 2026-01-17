@@ -1,17 +1,24 @@
+import { useState } from 'react';
 import Select from 'react-select'
+import CreatableSelect from 'react-select/creatable';
 
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' }
-]
+const colourOptions=[
+  { value: 'ocean', label: 'Ocean', color: '#00B8D9', isFixed: true },
+  { value: 'red', label: 'Red', color: '#FF5630', isFixed: true },
+  { value: 'slate', label: 'Slate', color: '#253858' },
+  { value: 'silver', label: 'Silver', color: '#666666' },
+];
 
-const MyComponent = () => (
-  <Select   styles={{
-    control: (baseStyles, state) => ({
-      ...baseStyles,
-      borderColor: state.isFocused ? 'grey' : 'red',
-    }),
-  }} options={options} />
-)
+
+const MyComponent = () => {
+  const [label, setLabel]=useState([]);
+  console.log("label value is", label);
+  return (
+    <CreatableSelect
+    styles={{ control: (baseStyles, state) => ({ ...baseStyles,  borderColor: state.isFocused ? 'grey' : 'red' })}}
+    isMulti 
+    options={colourOptions} 
+    onChange={(value)=>setLabel(value)}/>
+  )
+}
 export default MyComponent;

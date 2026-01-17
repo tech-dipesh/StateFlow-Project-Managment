@@ -31,8 +31,8 @@ export default function CardTaskMenu({bothEdit, bothEditFeature, task, tasks, se
       )}>🏷️</button>
       
       {isLabel && (
-        <div className='mt-2  ' onClick={(e)=>e.stopPropagation()}>
-          <Label setIsLabel={setIsLabel} isLabel={isLabel}/>
+        <div className='mt-2' onClick={(e)=>e.stopPropagation()}>
+          <Label setIsLabel={setIsLabel} isLabel={isLabel} id={task.id}/>
         </div>
       )}
     </div>

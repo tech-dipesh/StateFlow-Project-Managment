@@ -12,6 +12,8 @@
 - When we do: `arr.slice(0, -1)` it'll remove the last index value and return teh new value.
 - i've forgetten the syntax of: `parseInt` convert to the integar of string.
 - Nullis cohersion i've forgetten: `val ?? 9` mean if val is undefined/null use 9 o r else use val.
+- if we want the direct return on the jsx: we can do with like this way: `export ()=>()` it become a export with can write all return statement on this ().
+- `whitespace-nowrap` make on single line not go on next line style
 
 
 
@@ -73,6 +75,9 @@
   - Add the Deadline time, feature to the project"
   - Implement the Sorting feature with Ascending, Descending, Default and the Deadline, with take another temporary variable where we use: `displayAllTasks` and if default is do nothing else, just spread the original data and sort that.
   - Also add the more sort by of, Priority, Status.
+  - Add the React Label/Tags for the each task.
+  - Finally Implement the Label tag with the hellp of the react-select Library
+  - Shwo the option tha tuser is previousl selected.
   
 
 

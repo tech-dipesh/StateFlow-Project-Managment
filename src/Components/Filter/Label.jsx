@@ -1,26 +1,34 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { createPortal } from 'react-dom';
 import Select from 'react-select'
 import CreatableSelect from 'react-select/creatable';
-
-const colourOptions=[
-  { value: 'Personal Life', label: 'Personal Life', color: '#00B8D9', isFixed: true },
-  { value: 'Business', label: 'Business', color: '#FF5630', isFixed: true },
-  { value: 'Career', label: 'Career', color: '#253858' },
-  { value: 'Health', label: 'Health', color: '#666666' },
+import {dataContext} from "../../context/dataContextProvider"
+const opt=[
+  { value: 'Personal Life', label: 'Personal Life',  isFixed: true },
+  { value: 'Business', label: 'Business',isFixed: true },
+  { value: 'Career', label: 'Career',},
+  { value: 'Health', label: 'Health' },
 ];
 
-
-const Label = ({setIsLabel, isLabel}) => {
-  const [label, setLabel]=useState([]);
-  console.log("label value is", label);
+const Label = ({setIsLabel, id}) => {
+  const {tasks, setTasks}=useContext(dataContext)
+  const mathThatId=tasks.find(task=>task.id===id) || [];
+  let allPossibleOptions=mathThatId.Labels.map(t=> ({value: t, label: t}));
+  const changeLabels=(value)=>{
+    setIsLabel(true)
+    const allListValues=value.map(f=>f.value) || []
+    setTasks(prev=>
+        prev.map(task=>
+          task.id===id ?{...task, Labels: allListValues}:task
+        ))
+  }
   return (
     <div className='w-64 relative right-4'>
     <CreatableSelect
     menuPortalTarget={document.body}
     isMulti
-    options={colourOptions} 
-    onChange={(value)=>(setLabel(value), setIsLabel(true))}/>
+    options={allPossibleOptions} 
+    onChange={changeLabels}/>
     </div>
   )
 }
