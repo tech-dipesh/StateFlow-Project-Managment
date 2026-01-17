@@ -87,7 +87,7 @@ export default function TableBody({ displayAllTasks, setTitleEdit, titleedit, se
               )}
             </td>
             <td
-              className={`p-4 text-lg flex items-center gap-2 cursor-pointer
+              className={`p-4 text-lg flex items-center gap-2 cursor-pointer whitespace-nowrap
               ${task.status === 'To do' ? 'bg-gray-500' : task.status === 'In Progress' ? 'bg-gray-400' : 'bg-blue-500'}`}
               onClick={() => setStatusEdit(task.id)} >
               <span className="w-5xs">{task.status}

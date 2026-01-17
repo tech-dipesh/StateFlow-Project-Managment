@@ -28,9 +28,9 @@ const sortTheData=(e)=>{
 }
 
   return (
-    <div className="h-5/6 flex flex-col items-center overflow-auto p-4">
+    <div className="h-11/12 flex flex-col items-center overflow-auto p-4">
       <h1 className="text-3xl">Task Table</h1>
-      <table className="w-full max-w-5xl border-collapse border-2 border-gray-300"
+      <table className="w-full max-w-7xl border-collapse border-2 border-gray-300"
         onClick={(e) => {
           if (e.target === e.currentTarget ||
             e.target.tagName === 'TBODY' ||
@@ -42,12 +42,12 @@ const sortTheData=(e)=>{
         }}
       >
         <thead>
-          <tr className="bg-gray-100 border-b-2 border-gray-300">
-            <th className="p-4 m-10 text-xl font-semibold text-left">Title
-                  <span className="ml-5 py-1 px-2 rounded-xs bg-gray-400 opacity-65 cursor-pointer" onClick={()=>setIsSortOption(!isSortOption)
+          <tr className="bg-gray-100 border-b-2 space-8 border-gray-300">
+            <th className="p-4 m-1 text-xl font-semibold text-left">Title
+                <span className="ml-5 py-1 px-2 rounded-xs bg-gray-400 opacity-65 cursor-pointer" onClick={()=>setIsSortOption(!isSortOption)
 }>
-                    <span>Sort By: {defaultSort}</span>
-                    <FontAwesomeIcon icon={faSquareCaretDown}/>
+                  <span>Sort By: {defaultSort}</span>
+                  <FontAwesomeIcon icon={faSquareCaretDown}/>
                   </span>
                   {isSortOption && 
                     <div className="grid justify-center z-50 absolute align-middle">
@@ -57,13 +57,13 @@ const sortTheData=(e)=>{
                     </div>
                   }
             </th>
-            <th className="p-4 text-xl font-semibold text-left">Status
+            <th className="p-4 text-xl font-semibold text-left whitespace-nowrap">Status
                   <FontAwesomeIcon icon={faFilter} className='cursor-pointer hover:text-blue-500 transition-colors ml-5' onClick={()=>SetIsFilterPopup(!isFilterPopup)}/>
      <Filter options={["To do", "In progress", "Completed"]} isFilterPopup={isFilterPopup} SetIsFilterPopup={SetIsFilterPopup} optionValue={filterCritrea} setOptionValue={setFilterCritrea}/></th>
-            <th className=" text-xl font-semibold text-center">Priority</th>
+            <th className="text-xl font-semibold text-center">Priority</th>
             <th className=" text-xl font-semibold text-center">Deadline</th>
-            <th className="p-4 text-xl font-semibold text-left">Change</th>
-            <th className="p-4 text-xl font-semibold text-left">Manage</th>
+            <th className="p-2 text-xl font-semibold text-center">Change</th>
+            <th className="p-2 text-xl font-semibold text-center">Manage</th>
           </tr>
         </thead>
           <TableBody displayAllTasks={displayAllTasks} titleedit={titleedit} setTitleEdit={setTitleEdit} statusedit={statusedit} setStatusEdit={setStatusEdit}/>
