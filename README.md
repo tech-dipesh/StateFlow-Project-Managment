@@ -82,6 +82,7 @@
   - I've make basic setup  the Dark Light for the tailwindcss with the stack overflow just basic 3 steps rest i've done myself.
   - I've to setup the `tailwind.config.js`.
   - Move the Createbutton the separate page. 
+  - Finally Successfully Implenent the Chart Featuer with pie chart, ON the Separate chart comps, as well with on the hoomepage, Use two library to achieve it.
 
 
   # My Own Usage that i can use on coming days.
@@ -148,8 +149,9 @@
   - dnd-kit/core (for the drag and drop feature)
   - react-date-picker
   - react-select
-  - chroma-js
-  - 
+  - chart.js
+  - React-chartjs-2
+
 
 
 # >:warning: When it says infinite renreder it mainly due to the infinite render or not wrap oout setter method on the useEffect, 

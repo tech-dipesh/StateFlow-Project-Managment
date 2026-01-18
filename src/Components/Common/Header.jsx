@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router'
+import { Link, NavLink } from 'react-router'
 import Keyboardshortcut from "./keyboard-shortcut";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +13,8 @@ export default function Header({isPopup, setIsPopup}) {
   }
   
   return (
-    <div className='mt-5 flex justify-end mr-48 bg-blue-500 dark:bg-red-500'>
+    <div className='mt-5 flex justify-end mr-48'>
+      <Link to='./' className='relative h-8 w-24 scale-125 ml-4'><img src="logo.png" alt="Logo" /></Link>
       <ul className='flex gap-24 ml-48 font-semibold text-2xl text-blue-500'>
         <li className='cursor-pointer'><NavLink to='/'>Home</NavLink></li>
         <li className='cursor-pointer'><NavLink to='/list'>List</NavLink></li>
@@ -27,7 +28,7 @@ export default function Header({isPopup, setIsPopup}) {
       </ul>
       
       <button 
-        className='mx-8 left-32 relative border border-blue-500 p-1 rounded-xs cursor-pointer shadow'
+        className='mx-8 left-32 max-h-12 relative border border-blue-500 p-1 rounded-xs cursor-pointer shadow'
         onClick={changeDarkMode}
       >
         {isDark ? (
