@@ -78,7 +78,10 @@
   - Add the React Label/Tags for the each task.
   - Finally Implement the Label tag with the hellp of the react-select Library
   - Shwo the option tha tuser is previousl selected.
-  
+  - Trying to implement the dark and light mode started
+  - I've make basic setup  the Dark Light for the tailwindcss with the stack overflow just basic 3 steps rest i've done myself.
+  - I've to setup the `tailwind.config.js`.
+   
 
 
   # My Own Usage that i can use on coming days.

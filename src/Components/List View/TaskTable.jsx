@@ -30,7 +30,7 @@ const sortTheData=(e)=>{
   return (
     <div className="h-11/12 flex flex-col items-center overflow-auto p-4">
       <h1 className="text-3xl">Task Table</h1>
-      <table className="w-full max-w-7xl border-collapse border-2 border-gray-300"
+      <table className="w-full max-w-7xl whitespace-nowrap border-2 border-gray-300"
         onClick={(e) => {
           if (e.target === e.currentTarget ||
             e.target.tagName === 'TBODY' ||

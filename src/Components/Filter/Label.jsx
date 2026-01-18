@@ -27,6 +27,7 @@ const Label = ({setIsLabel, id}) => {
     <CreatableSelect
     menuPortalTarget={document.body}
     isMulti
+    
     options={allPossibleOptions} 
     onChange={changeLabels}/>
     </div>

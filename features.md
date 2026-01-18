@@ -55,48 +55,6 @@ Hard, but very impressive.
 
 **Core concept:** Convert task dates to horizontal positions, render bars proportionally to timeline.
 
----
-
-## **Priority & Sorting System**
-**Basic idea:** Multi-dimensional sorting with visual priority indicators.
-
-**What you'll add:**
-- Priority levels (Critical/High/Medium/Low)
-- Multiple sort criteria (priority + due date + created date)
-- Saved sort preferences
-- Visual priority badges/icons
-
-**Library options:**
-1. **None needed** (vanilla JS array sorting)
-2. **Lodash.orderBy** (advanced sorting)
-3. **React-table** (if using table component)
-
-**Core concept:** Store priority value, create sorting function that combines multiple fields, persist sort state.
----
-
-## **Tags/Labels System**
-**Basic idea:** Flexible categorization with color-coded tags.
-
-**What you'll add:**
-- Create/edit/delete tags
-- Assign multiple tags per task
-- Filter by combination of tags
-- Tag colors with picker
-- Tag management panel
-
-**Library options:**
-1. **React Select** (multi-select with creatable)
-2. **React Tags Input** (dedicated tag component)
-3. **DIY with chips pattern**
-
-**Core concept:** Store tags as array of objects, each task has array of tag IDs, many-to-many relationship management.
-
----
-
-**Pick one** and I'll give you the minimal step-by-step approach.
-
-
-
 
 
 Sure! Here are feature suggestions for your React frontend project management tool:

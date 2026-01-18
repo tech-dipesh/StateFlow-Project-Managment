@@ -14,7 +14,7 @@ import Header from "./Components/Common/Header"
 import Practice from './Components/Practice/practice.jsx';
 import Keyboardshortcut from './Components/Common/keyboard-shortcut.jsx';
 import Home from './Home/Home.jsx';
-import Chart from './Components/Chart/Chart.jsx';
+import Chart from './Components/Chart/Chart';
 let router = createBrowserRouter([
 {
     path: "/",

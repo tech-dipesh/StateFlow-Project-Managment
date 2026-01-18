@@ -1,6 +1,6 @@
   import { faMagnifyingGlass, faSearch, faUpLong, faXmark } from '@fortawesome/free-solid-svg-icons'
   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import React, { createElement } from 'react'
+  import React from 'react'
 import { createPortal } from 'react-dom'
   export default function Keyboardshortcut({isPopup, setIsPopup}) {
     const allCommand = [

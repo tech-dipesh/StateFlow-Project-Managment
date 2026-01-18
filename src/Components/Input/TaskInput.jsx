@@ -22,7 +22,6 @@ export default function TaskInput({isInput}) {
     const newTaskWithId={...data, id: crypto.randomUUID()};
     setTasks((prev)=>[...prev, newTaskWithId])
     setError(false)
-    console.log("new data is", data);
     setData({title: '', status: '', priority: '', date: ''})
   }
   return (
