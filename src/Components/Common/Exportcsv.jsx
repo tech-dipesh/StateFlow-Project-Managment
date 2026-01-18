@@ -6,16 +6,18 @@ import Json from "../../assets/json.png"
 export default function Exportcsv() {
   const {tasks}=useContext(dataContext)
   const [isExport, setIsExport]=useState(false);
-const exportJson=(type)=>{
-   const a = document.createElement('a');
-  a.href = `data:${type}/json;charset=utf-8,` + encodeURIComponent(JSON.stringify(tasks));
-  a.download = 'data.json';
-  a.click();
-  setIsExport(!isExport);
-}
-const exportCsv=()=>{
-const csvValue = "data:text/csv;charset=utf-8," +tasks;
-    // + tasks.map(e => e.join(",")).join("\n");
+  
+  
+  const exportJson=(type)=>{
+    const a = document.createElement('a');
+    a.href = `data:${type}/json;charset=utf-8,` + encodeURIComponent(JSON.stringify(tasks));
+    a.download = 'data.json';
+    a.click();
+    setIsExport(!isExport);
+  }
+  const exportCsv=()=>{
+    const allCsvHeader= [['title','status','priority','date','Labels','id'],...tasks.map(task=>[task.title, task.status, task.priority, task.date, task.labels, task.id])].map(m=>m.join(",")).join('\r\n')
+    const csvValue = "data:text/csv;charset=utf-8," +allCsvHeader;
 const encodedUri = encodeURI(csvValue);
 window.open(encodedUri);
 setIsExport(!isExport);

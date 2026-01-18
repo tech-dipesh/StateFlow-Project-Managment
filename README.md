@@ -44,7 +44,9 @@
     - the main problemm is on when i make the updateResult, the currentValue is not guarented too be teh array so i then check it fix now.
     - The colspan problem of not coming to the center of teh page when list is empty.
     - During the sorting data problem, i've face a problem of not able to implement the sort by relevelancee, means go to the previous stage, which i done with the take temp variable and print that modify that not original.
-
+  - During make a export feature i'm unable to separate the object for the csv format.
+  - Also not line breaking not due to not spread the array.
+  
   
 
 # Features:
@@ -85,7 +87,7 @@
   - Finally Successfully Implenent the Chart Featuer with pie chart, ON the Separate chart comps, as well with on the hoomepage, Use two library to achieve it.
   - Add teh footer page
   - And also add the website logo
-  
+  - Add the featuer of teh export of our data on csv and the json.
 
   # My Own Usage that i can use on coming days.
   - I've make one Input, and button which are mostly used my own style:
