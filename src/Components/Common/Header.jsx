@@ -14,7 +14,7 @@ export default function Header({isPopup, setIsPopup}) {
   
   return (
     <div className='mt-5 flex justify-end mr-48'>
-      <Link to='./' className='relative h-8 w-24 scale-125 ml-4'><img src="logo.png" alt="Logo" /></Link>
+      <Link to='./' className='relative h-8 w-16 scale-125 ml-4 hover:h-10 hover:w-18'><img src="logo.png" alt="Logo" /></Link>
       <ul className='flex gap-24 ml-48 font-semibold text-2xl text-blue-500'>
         <li className='cursor-pointer'><NavLink to='/'>Home</NavLink></li>
         <li className='cursor-pointer'><NavLink to='/list'>List</NavLink></li>

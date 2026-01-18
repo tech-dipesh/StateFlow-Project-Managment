@@ -29,7 +29,7 @@ const sortTheData=(e)=>{
 
   return (
     <div className="h-11/12 flex flex-col items-center overflow-auto p-4">
-      <h1 className="text-3xl">Task Table</h1>
+      <h1 className="text-3xl font-bold my-2">Task Table</h1>
       <table className="w-full max-w-7xl whitespace-nowrap border-2 border-gray-300"
         onClick={(e) => {
           if (e.target === e.currentTarget ||
@@ -43,7 +43,7 @@ const sortTheData=(e)=>{
       >
         <thead>
           <tr className="bg-gray-100 border-b-2 space-8 border-gray-300">
-            <th className="p-4 m-1 text-xl font-semibold text-left">Title
+            <th className="p-4 m-1 text-xl font-semibold text-lef">Title
                 <span className="ml-5 py-1 px-2 rounded-xs bg-gray-400 opacity-65 cursor-pointer" onClick={()=>setIsSortOption(!isSortOption)
 }>
                   <span>Sort By: {defaultSort}</span>

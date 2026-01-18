@@ -1,0 +1,40 @@
+import { faFileCsv, faFileExport, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useContext, useState } from 'react'
+import { dataContext } from '../../context/dataContextProvider'
+import Json from "../../assets/json.png"
+export default function Exportcsv() {
+  const {tasks}=useContext(dataContext)
+  const [isExport, setIsExport]=useState(false);
+const exportJson=(type)=>{
+   const a = document.createElement('a');
+  a.href = `data:${type}/json;charset=utf-8,` + encodeURIComponent(JSON.stringify(tasks));
+  a.download = 'data.json';
+  a.click();
+  setIsExport(!isExport);
+}
+const exportCsv=()=>{
+const csvValue = "data:text/csv;charset=utf-8," +tasks;
+    // + tasks.map(e => e.join(",")).join("\n");
+const encodedUri = encodeURI(csvValue);
+window.open(encodedUri);
+setIsExport(!isExport);
+}
+return (
+    <div className='mx-28'>
+      <button className="opacitiy-85 cursor-pointer bg-blue-500 font-semibold py-2 px-4 rounded" onClick={()=>setIsExport(!isExport)}><FontAwesomeIcon icon={faFileExport}/>Export</button>
+      {
+        isExport &&
+          <div className='fixed inset-0 bg-black/50 flex items-center justify-center z-50'>
+      <div className='relative bg-gray-800 p-12 rounded flex gap-4'>
+        <FontAwesomeIcon className='absolute top-2 right-2 cursor-pointer' icon={faXmark} onClick={()=>setIsExport(!isExport)}/>
+        <div className='bg-blue-500 font-semibold py-2 px-4 rounded cursor-pointer' onClick={()=>exportCsv('csv')}><FontAwesomeIcon icon={faFileCsv}/> CSV</div>
+        <div className='bg-blue-500 font-semibold py-2 px-4 rounded flex items-center gap-1 cursor-pointer' onClick={()=>exportJson('json')}>
+          <img src={Json} className='h-4 w-4'/> JSON
+        </div>
+      </div>
+    </div>
+      }
+    </div>
+  )
+}

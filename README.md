@@ -83,7 +83,9 @@
   - I've to setup the `tailwind.config.js`.
   - Move the Createbutton the separate page. 
   - Finally Successfully Implenent the Chart Featuer with pie chart, ON the Separate chart comps, as well with on the hoomepage, Use two library to achieve it.
-
+  - Add teh footer page
+  - And also add the website logo
+  
 
   # My Own Usage that i can use on coming days.
   - I've make one Input, and button which are mostly used my own style:
