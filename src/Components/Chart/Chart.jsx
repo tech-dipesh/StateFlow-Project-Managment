@@ -26,13 +26,16 @@ const data = {
 
 export default function Chart() {
   const {tasks}=useContext(dataContext)
-  // const allDataCount=tasks.map(t=>{
-    console.log("length is", tasks);
+    console.log("length is", tasks.length);
+    let todo=0, progress=0, completed=0;
+
     tasks.map(t=>{
-      console.log(t.status);
-    t.status=="Todo"?console.log("This all are in todo"):t.status=="Todo"?console.log("All are in progresss"):console.log("All have been completed")
+      const LowerValue=t.status.toLowerCase().replace(/\s+/g, "")
+      LowerValue=="todo"?todo++:LowerValue=="inprogress"?progress++:completed++
   })
-  
+  const arr=[todo, progress, completed];
+  data.datasets[0].data=arr;
+
   return (
     <>
     <h1 className='font-semibold flex justify-center my-8'>Chart Data</h1>

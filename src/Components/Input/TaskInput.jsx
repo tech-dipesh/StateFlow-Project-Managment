@@ -22,7 +22,8 @@ export default function TaskInput({isInput}) {
     const newTaskWithId={...data, id: crypto.randomUUID()};
     setTasks((prev)=>[...prev, newTaskWithId])
     setError(false)
-    setData({title: '', status: '', priority: '', date: ''})
+    console.log("new Data is created", data);
+    setData({title: '', status: '', priority: 'Medium', date: ''})
   }
   return (
     <div className='h-1/4 grid items-center justify-center mt-5'>

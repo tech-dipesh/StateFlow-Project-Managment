@@ -5,6 +5,7 @@ import Columns from "./Columns";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router";
+import Createbutton from "../Common/Createbutton";
 export default function Board (){
    const mouseSensor = useSensor(MouseSensor);
   const touchSensor = useSensor(TouchSensor);
@@ -29,7 +30,7 @@ const sensors = useSensors(
   return (
     <DndContext onDragEnd={handleDragDnd} collisionDetection={closestCorners} sensors={sensors}>
     <Columns/>
-    <button className="left-60 relative opacitiy-85 cursor-pointer bg-blue-500 font-semibold  py-2 px-4 rounded m-2" onClick={()=>navigate("/list")}><FontAwesomeIcon icon={faPlus}/>Create</button>
+    <Createbutton/>
     </DndContext>
   )
 }
