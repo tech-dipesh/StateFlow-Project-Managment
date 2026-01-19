@@ -172,5 +172,6 @@
   - React-chartjs-2
   - Lodash
 - React Loader Spinner
+- Vercel Analytics
 
 >:warning: When it says infinite rerender on the react it mainly due to the infinite render or not wrap out setter method on the useEffect, we've to give the depedancy array to stop rerendering every time as our state is changed.

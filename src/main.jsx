@@ -14,6 +14,7 @@ const Board=lazy(()=>import("./Components/Board View/Board"))
 import Header from "./Components/Common/Header"
 const Keyboardshortcut=lazy(()=>import("./Components/Common/keyboard-shortcut"))
 const Chart=lazy(()=>import("./Components/Chart/Chart"))
+import { Analytics } from "@vercel/analytics/next"
 
 let router = createBrowserRouter([
 {
@@ -52,6 +53,7 @@ let router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Suspense fallback={<Loader />}>
+    <Analytics/>
       <RouterProvider router={router} />
     </Suspense>
   </StrictMode>,
