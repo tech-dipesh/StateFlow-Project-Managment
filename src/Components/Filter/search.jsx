@@ -11,10 +11,10 @@ export default function Search({ tasks, setSearchResults }) {
     setSearchResults(storeAllMatchMovie);
   }
   return (
-    <div className='flex justify-end px-8 py-4'>
+    <div className='flex md:justify-end px-8 py-4'>
       <div className='flex flex-col gap-2'>
         <h2 className="text-lg font-semibold text-gray-700">Search Task:</h2>
-        <div className='flex gap-3 items-center'>
+        <div className='flex flex-col md:flex-row gap-3 items-center'>
           <input
             type="text"
             placeholder="Enter the task to search..."
@@ -22,13 +22,15 @@ export default function Search({ tasks, setSearchResults }) {
             onChange={searchValue}
             value={search}
           />
-          <button className="px-6 py-2 bg-blue-500 text-white rounded-lg cursor-pointer font-semibold hover:bg-blue-600 transition-colors">
-            Search
-          </button>
-          <button className="px-6 py-2 bg-gray-300 text-gray-700 rounded-lg cursor-pointer font-semibold hover:bg-gray-400"
+          <div className="flex gap-3 w-full md:auto">
+          <button className="flex-1 md:flex-none md:px-2  px-6 py-2 bg-gray-300 text-gray-700 rounded-lg cursor-pointer font-semibold hover:bg-gray-400 order-1 md:order-2"
             onClick={() => setSearch('')}>
             Clear
           </button>
+          <button className="px-6 py-2 bg-blue-500 text-white rounded-lg cursor-pointer font-semibold hover:bg-blue-600 transition-colors  order-2 md:order-1">
+            Search
+          </button>
+          </div>
         </div>
       </div>
     </div>

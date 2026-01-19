@@ -26,29 +26,31 @@ const sortTheData=(e)=>{
   setIsSortOption(!isSortOption);
   setDefaultSort(e.target.textContent)
 }
+const eventDelegation=(e)=>{
+     if (e.target === e.currentTarget ||
+      e.target.tagName === 'TBODY' ||
+      e.target.tagName === 'TR' ||
+      e.target.tagName === 'TH') {
+      setTitleEdit(null);
+      setStatusEdit(null);
+      }
+}
 
   return (
-    <div className="max-h-full flex flex-col items-center overflow-auto p-2  md:h-5/6 lg:p-4 lg:h-11/12">
+    <div className="max-h-full flex flex-col items-center overflow-auto p-1 md:p-2 lg:p-4 md:h-5/6 lg:h-11/12">
       <h1 className="text-xl font-bold my-2 md:text-2xl lg:text-3xl">Task Table</h1>
       <div className="overflow-x-auto w-full">
 
-      <table className="min-w-full max-w-2xl border-2 border-gray-300 md:max-w-5xl md:whitespace-nowrap lg:w-full lg:max-w-7xl"
-        onClick={(e) => {
-          if (e.target === e.currentTarget ||
-            e.target.tagName === 'TBODY' ||
-            e.target.tagName === 'TR' ||
-            e.target.tagName === 'TH') {
-              setTitleEdit(null);
-            setStatusEdit(null);
-          }
-        }}
+     <table className="min-w-full max-w-2xl border-2 border-gray-300 md:max-w-5xl md:whitespace-nowrap lg:w-full lg:max-w-7xl table-fixed"
+        onClick={(e)=>eventDelegation(e)}
         >
         <thead>
           <tr className="bg-gray-100 border-b-2 border-gray-300 lg:space-8">
-            <th className="p-2 md:p-4 m-0 md:m-1 font-semibold text-left text-sm md:text-lg lg:text-xl relative">Title
+            <th className="p-2 md:p-4 m-0 md:m-1 font-semibold text-left text-sm md:text-lg lg:text-xl relative max-w-30 md:max-w-none lg:text-2xl">
+              Title
                 <span className="ml-2 py-1 px-2 text-xs rounded-xs bg-gray-400 opacity-65 cursor-pointer relative md:text-base" onClick={()=>setIsSortOption(!isSortOption)}>
+                  <span className="md:hidden">{defaultSort}</span>
                   <span className="hidden md:inline">Sort By: {defaultSort}</span>
-  <span className="hidden md:inline">Sort By: </span>
                   <FontAwesomeIcon icon={faSquareCaretDown}/>
                   </span>
                   {isSortOption && 
@@ -59,13 +61,13 @@ const sortTheData=(e)=>{
                     </div>
                   }
             </th>
-            <th className="p-4 font-semibold text-left text-sm md:whitespace-nowrap md:text-lg lg:text-xl">Status
-                  <FontAwesomeIcon icon={faFilter} className='cursor-pointer hover:text-blue-500 transition-colors ml-5' onClick={()=>SetIsFilterPopup(!isFilterPopup)}/>
+           <th className="p-2 md:p-4 font-semibold text-left text-xs md:whitespace-nowrap md:text-lg lg:text-2xl">Status
+                  <FontAwesomeIcon icon={faFilter} className='text-sm md:text-base cursor-pointer hover:text-blue-500 transition-colors ml-2 md:ml-5' onClick={()=>SetIsFilterPopup(!isFilterPopup)}/>
      <Filter options={["To do", "In progress", "Completed"]} isFilterPopup={isFilterPopup} SetIsFilterPopup={SetIsFilterPopup} optionValue={filterCritrea} setOptionValue={setFilterCritrea}/></th>
-            <th className="font-semibold text-sm p-2 m-0 md:table-cell md:m-1  md:text-lg md:p-4 lg:text-xl">Priority</th>
-            <th className="font-semibold text-sm p-2 m-0 md:table-cell md:m-1  md:text-lg  md:p-4 lg:text-xl">Deadline</th>
-            <th className="font-semibold text-sm  p-2 m-0 md:table-cell  md:m-1 md:text-lg  md:p-4 lg:text-xl">Change</th>
-            <th className=" font-semibold text-sm  p-2 m-0 md:table-cell md:m-1 md:text-lg  md:p-4 lg:text-xl">Manage</th>
+            <th className=" md:table-cell p-2 md:p-4 text-center text-xs md:text-sm lg:text-2xl">Priority</th>
+            <th className=" md:table-cell p-2 md:p-4 text-center text-xs md:text-sm lg:text-2xl">Deadline</th>
+            <th className=" md:table-cell p-2 md:p-4 text-center text-xs md:text-sm lg:text-2xl">Change</th>
+            <th className=" md:table-cell p-2 md:p-4 text-center text-xs md:text-sm lg:text-2xl">Manage</th>
           </tr>
         </thead>
           <TableBody displayAllTasks={displayAllTasks} titleedit={titleedit} setTitleEdit={setTitleEdit} statusedit={statusedit} setStatusEdit={setStatusEdit}/>

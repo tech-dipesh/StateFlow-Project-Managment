@@ -14,7 +14,7 @@
 - Nullis cohersion i've forgetten: `val ?? 9` mean if val is undefined/null use 9 o r else use val.
 - if we want the direct return on the jsx: we can do with like this way: `export ()=>()` it become a export with can write all return statement on this ().
 - `whitespace-nowrap` make on single line not go on next line style
-
+- `startCase(camelCase(val))` Convert any value to the CamelCase with the StartCase 
 
 
 # Some syntax that i've forgetten or issue that i've fixed which i myself fix.:
@@ -50,7 +50,8 @@
 
 
   # Repsonsive Design:
-    - 
+    - Add the responsive design on the multiple page of the header, footer and also on the task th side
+    - Lodash provide us to convert any valeu to the camelCase which i'm using.
   
 
 # Features:
@@ -92,6 +93,7 @@
   - Add teh footer page
   - And also add the website logo
   - Add the featuer of teh export of our data on csv and the json.
+  - 
 
   # My Own Usage that i can use on coming days.
   - I've make one Input, and button which are mostly used my own style:
@@ -159,7 +161,7 @@
   - react-select
   - chart.js
   - React-chartjs-2
-
+  - Lodash
 
 
 # >:warning: When it says infinite renreder it mainly due to the infinite render or not wrap oout setter method on the useEffect, 
