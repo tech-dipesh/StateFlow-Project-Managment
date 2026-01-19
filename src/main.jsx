@@ -20,7 +20,7 @@ let router = createBrowserRouter([
     path: "/",
     element: <App/>,
     loader: <Loader/>,
-    errorElement: <Error/>,
+    // errorElement: <Error/>,
     children: [
       {
         index: true,
