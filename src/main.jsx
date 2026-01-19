@@ -19,8 +19,7 @@ let router = createBrowserRouter([
 {
     path: "/",
     element: <App/>,
-    loader: <Loader/>,
-    // errorElement: <Error/>,
+    errorElement: <Error/>,
     children: [
       {
         index: true,
@@ -52,6 +51,8 @@ let router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Suspense fallback={<Loader />}>
+      <RouterProvider router={router} />
+    </Suspense>
   </StrictMode>,
 )
