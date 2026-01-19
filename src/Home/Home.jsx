@@ -8,7 +8,6 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function Home() {
   const {tasks, allPinned}=useContext(dataContext)
-  console.log("all pinned is", allPinned);
   return (
     <>
    <h1 className="text-center text-lg font-semibold mb-3">
