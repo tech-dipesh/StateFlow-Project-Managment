@@ -8,5 +8,5 @@ export default function Createbutton({isInput:inputZero, setIsInput:InputFirst})
   const  [local, setLocal]=useState(false)
   const isInput=inputZero ?? local;
   const setIsInput=InputFirst ?? setLocal;
-  return  <button className="opacitiy-85 mx-24 cursor-pointer bg-blue-500 font-semibold py-2 px-4 rounded h-12" onClick={()=>(setIsInput(!isInput), navigate("../list"))}><FontAwesomeIcon icon={faPlus}/>Create</button>
+  return  <button className="opacitiy-85 mx-28 cursor-pointer bg-blue-500 font-semibold py-2 px-4 rounded hover:text-gray-500" onClick={()=>(setIsInput(!isInput), navigate("../list"))}><FontAwesomeIcon icon={faPlus}/>Create</button>
 }

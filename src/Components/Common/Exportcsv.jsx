@@ -24,7 +24,7 @@ setIsExport(!isExport);
 }
 return (
     <div className='mx-28'>
-      <button className="opacitiy-85 cursor-pointer bg-blue-500 font-semibold py-2 px-4 rounded" onClick={()=>setIsExport(!isExport)}><FontAwesomeIcon icon={faFileExport}/>Export</button>
+      <button className="opacitiy-85 cursor-pointer bg-blue-500 font-semibold py-2 px-4 rounded hover:text-gray-500" onClick={()=>setIsExport(!isExport)}><FontAwesomeIcon icon={faFileExport}/>Export</button>
       {
         isExport &&
           <div className='fixed inset-0 bg-black/50 flex items-center justify-center z-50'>

@@ -14,7 +14,7 @@ export default function Home() {
       <h1 className='font-semibold'>Task Status.</h1>
       <h1>Total Task created: {tasks.length}</h1>
     </div>
-      <Chart/>
+    <Chart/>
     </>
   )
 }

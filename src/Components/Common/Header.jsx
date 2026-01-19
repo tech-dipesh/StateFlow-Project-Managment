@@ -13,9 +13,9 @@ export default function Header({isPopup, setIsPopup}) {
   }
   
   return (
-    <div className='mt-5 flex justify-end mr-48'>
-      <Link to='./' className='relative h-8 w-16 scale-125 ml-4 hover:h-10 hover:w-18'><img src="logo.png" alt="Logo" /></Link>
-      <ul className='flex gap-24 ml-48 font-semibold text-2xl text-blue-500'>
+    <div className='mt-5 flex justify-end mr-4 md:mr-24 lg:mr-48'>
+      <Link to='./' className='h-8 w-12 md:scale-125 hover:h-10 hover:w-18'><img src="logo.png" alt="Logo"/></Link>
+      <ul className='flex gap-4 ml-4 font-semibold text-base md:text-xl md:gap-8 lg:text-2xl  lg:gap-24 lg:ml-48 text-blue-500'>
         <li className='cursor-pointer'><NavLink to='/'>Home</NavLink></li>
         <li className='cursor-pointer'><NavLink to='/list'>List</NavLink></li>
         <li className='cursor-pointer'><NavLink to='/board'>Board</NavLink></li>
@@ -28,7 +28,7 @@ export default function Header({isPopup, setIsPopup}) {
       </ul>
       
       <button 
-        className='mx-8 left-32 max-h-12 relative border border-blue-500 p-1 rounded-xs cursor-pointer shadow'
+      className='mx-2 md:mx-8 left-4 md:left-18 lg:left-32 max-h-12 relative border border-blue-500 p-1 rounded-xs cursor-pointer shadow'
         onClick={changeDarkMode}
       >
         {isDark ? (

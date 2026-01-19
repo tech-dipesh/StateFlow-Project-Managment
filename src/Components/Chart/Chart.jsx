@@ -26,9 +26,7 @@ const data = {
 
 export default function Chart() {
   const {tasks}=useContext(dataContext)
-    console.log("length is", tasks.length);
     let todo=0, progress=0, completed=0;
-
     tasks.map(t=>{
       const LowerValue=t.status.toLowerCase().replace(/\s+/g, "")
       LowerValue=="todo"?todo++:LowerValue=="inprogress"?progress++:completed++
@@ -39,8 +37,10 @@ export default function Chart() {
   return (
     <>
     <h1 className='font-semibold flex justify-center my-8'>Chart Data</h1>
-    <div className='w-2/4 h-3/4 flex justify-center'>
-     <Pie data={data} className='justify-center align-middle left-2/4 relative'/>
+     <div className='w-full md:w-3/4 lg:w-2/4 mx-auto'>
+    <div className='flex justify-center'>
+    <Pie data={data} />
+  </div>
     </div>
     </>
   )
