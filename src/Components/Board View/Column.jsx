@@ -1,7 +1,5 @@
 import { useDroppable } from "@dnd-kit/core";
 import TaskCard from "./TaskCard";
-import { dataContext } from "../../context/dataContextProvider";
-import { useContext } from "react";
 
 export default function Column({tasks, column}) {
   const allNode=useDroppable({

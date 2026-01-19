@@ -1,6 +1,4 @@
-import { faFilter } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import filterIcon from "../../assets/filter.png"
 import { useState } from 'react';
 export default function Filter({ options, isFilterPopup, SetIsFilterPopup, setOptionValue}) {
   const [selectOption, setSelectoption]=useState(null);

@@ -1,12 +1,12 @@
 import { useContext, useState } from "react";
 import Filter from "../Filter/filters";
-import { faBars, faEllipsis, faFilter, faSquareCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { faFilter, faSquareCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TableBody from "./tableBody";
 import { dataContext } from "../../context/dataContextProvider";
 
 export default function TaskTable({filterCritrea,  setFilterCritrea, searchResults }) {
-  const {tasks, setTasks}=useContext(dataContext);
+  const {tasks}=useContext(dataContext);
   
   const [titleedit, setTitleEdit] = useState(null);
   const [isFilterPopup, SetIsFilterPopup]=useState(false);

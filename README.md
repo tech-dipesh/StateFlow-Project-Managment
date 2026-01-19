@@ -5,6 +5,7 @@
 # stack i've used:
   - Tailwindcss.
   - React
+  - React Router
   
 
 
@@ -15,6 +16,7 @@
 - if we want the direct return on the jsx: we can do with like this way: `export ()=>()` it become a export with can write all return statement on this ().
 - `whitespace-nowrap` make on single line not go on next line style
 - `startCase(camelCase(val))` Convert any value to the CamelCase with the StartCase 
+- `text-zinc-500` it's also the option on color that we cna use.
 
 
 # Some syntax that i've forgetten or issue that i've fixed which i myself fix.:
@@ -52,7 +54,8 @@
   # Repsonsive Design:
     - Add the responsive design on the multiple page of the header, footer and also on the task th side
     - Lodash provide us to convert any valeu to the camelCase which i'm using.
-  
+    - The problem during the resposinve design i'm still unable to make teh flex-row of teh list chart but small things have done.
+
 
 # Features:
   - User input
@@ -93,7 +96,8 @@
   - Add teh footer page
   - And also add the website logo
   - Add the featuer of teh export of our data on csv and the json.
-  - 
+  - Make the repsonvive desing for the mobile friendly to every page, from the homapge, chart, list, shortcut, and also header, and footer.
+  
 
   # My Own Usage that i can use on coming days.
   - I've make one Input, and button which are mostly used my own style:
@@ -162,6 +166,6 @@
   - chart.js
   - React-chartjs-2
   - Lodash
-
+- React Loader Spinner
 
 # >:warning: When it says infinite renreder it mainly due to the infinite render or not wrap oout setter method on the useEffect, 

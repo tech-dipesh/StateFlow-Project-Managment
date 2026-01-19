@@ -1,10 +1,9 @@
 import React, { useContext, useState } from 'react'
 import Option from '../Filter/Option';
 import { dataContext } from '../../context/dataContextProvider';
-import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CardTaskMenu from './cardTasksMenu';
-import { upperFirst, camelCase, startCase } from 'lodash';
+import { camelCase, startCase } from 'lodash';
 
 export default function TableBody({ displayAllTasks, setTitleEdit, titleedit, setStatusEdit, statusedit }) {
   const {tasks, setTasks}=useContext(dataContext);

@@ -1,14 +1,13 @@
-import { useContext, useState } from 'react';
-import { createPortal } from 'react-dom';
+import { useContext} from 'react';
 import Select from 'react-select'
 import CreatableSelect from 'react-select/creatable';
 import {dataContext} from "../../context/dataContextProvider"
-const opt=[
-  { value: 'Personal Life', label: 'Personal Life',  isFixed: true },
-  { value: 'Business', label: 'Business',isFixed: true },
-  { value: 'Career', label: 'Career',},
-  { value: 'Health', label: 'Health' },
-];
+// const opt=[
+//   { value: 'Personal Life', label: 'Personal Life',  isFixed: true },
+//   { value: 'Business', label: 'Business',isFixed: true },
+//   { value: 'Career', label: 'Career',},
+//   { value: 'Health', label: 'Health' },
+// ];
 
 const Label = ({setIsLabel, id}) => {
   const {tasks, setTasks}=useContext(dataContext)

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { dataContext } from '../context/dataContextProvider';
-import { redirect, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 
 export default function Keyword({setIsPopup, isPopup}) {
   const {undo, redo}=useContext(dataContext);

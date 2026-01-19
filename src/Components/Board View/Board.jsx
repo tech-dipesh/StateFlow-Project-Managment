@@ -2,9 +2,7 @@ import React, { useContext} from "react";
 import { closestCorners, DndContext, KeyboardSensor, MouseSensor, TouchSensor, useSensor, useSensors } from "@dnd-kit/core";
 import {dataContext} from "../../context/dataContextProvider"
 import Columns from "./Columns";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useNavigate } from "react-router";
 import Createbutton from "../Common/Createbutton";
 export default function Board (){
    const mouseSensor = useSensor(MouseSensor);

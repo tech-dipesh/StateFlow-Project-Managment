@@ -1,12 +1,10 @@
-import { useContext, useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {  useState } from 'react'
 import './App.css'
 import Task from './Components/List View/Task'
 import Header from "./Components/Common/Header"
-import { data, Outlet } from 'react-router'
+import { Outlet } from 'react-router'
 import Board from './Components/Board View/Board'
-import DataContextProvider, { dataContext } from './context/dataContextProvider'
+import DataContextProvider from './context/dataContextProvider'
 import Keyword from './Home/keyword'
 import Footer from "./Components/Common/Footer"
 function App() {
