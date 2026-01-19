@@ -99,6 +99,8 @@
   - Add the featuer of teh export of our data on csv and the json.
   - Make the repsonvive desing for the mobile friendly to every page, from the homapge, chart, list, shortcut, and also header, and footer.
   - Remove all teh import hooks that i've used and also dummy data.
+  - I've also implement the drag and drop undo chart view
+
 
   # My Own Usage that i can use on coming days.
   - I've make one Input, and button which are mostly used my own style:

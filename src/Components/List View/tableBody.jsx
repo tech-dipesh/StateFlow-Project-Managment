@@ -104,7 +104,7 @@ export default function TableBody({ displayAllTasks, setTitleEdit, titleedit, se
                 }
               </span>
             </td>
-            <CardTaskMenu bothEdit={bothEdit} bothEditFeature={bothEditFeature} task={task} tasks={tasks} setTasks={setTasks}/>
+            <CardTaskMenu bothEdit={bothEdit} bothEditFeature={bothEditFeature} task={task} setTasks={setTasks}/>
           </tr>
         ))
         )}

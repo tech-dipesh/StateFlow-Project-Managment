@@ -22,13 +22,13 @@ const Label = ({setIsLabel, id}) => {
         ))
   }
   return (
-    <div className='w-64 relative right-4'>
+    <div className='w-64 relative'>
     <CreatableSelect
     menuPortalTarget={document.body}
     isMulti
-    
     options={allPossibleOptions} 
     onChange={changeLabels}/>
+    <button>Ok</button>
     </div>
   )
 }
