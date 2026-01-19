@@ -26,7 +26,6 @@ const sensors = useSensors(
     task.id === taskId ? {...task, status: newStatus} : task
   ));
   }
-  const navigate=useNavigate();
   return (
     <DndContext onDragEnd={handleDragDnd} collisionDetection={closestCorners} sensors={sensors}>
     <Columns/>

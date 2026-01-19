@@ -1,4 +1,4 @@
-  import { faMagnifyingGlass, faSearch, faUpLong, faXmark } from '@fortawesome/free-solid-svg-icons'
+  import { faMagnifyingGlass, faUpLong, faXmark } from '@fortawesome/free-solid-svg-icons'
   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   import React from 'react'
 import { createPortal } from 'react-dom'
@@ -22,11 +22,11 @@ import { createPortal } from 'react-dom'
         <div className='w-full max-w-2xl bg-white rounded-xl shadow-2xl p-6 m-12'>
           <div className='flex justify-between items-center mb-6'>
             <h3 className='font-semibold text-black text-xl'>Keyboard shortcuts</h3>
-            <FontAwesomeIcon icon={faXmark} className='text-gray-500 cursor-pointer hover:text-gray-700' onClick={()=>setIsPopup(!isPopup)}/>
+            <FontAwesomeIcon icon={faXmark} className='text-gray-500 cursor-pointer hover:text-gray-700 p-0 text-base md:text-2xl md:p-' onClick={()=>setIsPopup(!isPopup)}/>
           </div>
           <div className="mb-6">
               <FontAwesomeIcon 
-              icon={faMagnifyingGlass}  className='absolute left-2xl top-32 text-gray-400 '/>
+              icon={faMagnifyingGlass}  className='absolute left-2xl p-2 text-gray-400 '/>
             <input type="text" className="bg-gray-100 h-10 w-full rounded-lg text-gray-700 px-10 border border-gray-300 focus:outline-none focus:border-gray-400" placeholder='Search Shortcut' />
           </div>
           <div className='space--y-2' onClick={(e)=>e.stopPropagation()}>
