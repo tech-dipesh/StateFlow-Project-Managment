@@ -4,6 +4,7 @@ import {dataContext} from "../../context/dataContextProvider"
 import Columns from "./Columns";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Createbutton from "../Common/Createbutton";
+import Exportcsv from "../Common/Exportcsv";
 export default function Board (){
    const mouseSensor = useSensor(MouseSensor);
   const touchSensor = useSensor(TouchSensor);
@@ -27,7 +28,10 @@ const sensors = useSensors(
   return (
     <DndContext onDragEnd={handleDragDnd} collisionDetection={closestCorners} sensors={sensors}>
     <Columns/>
-    <Createbutton/>
+    <div className="flex justify-between w-full my-24">
+      <Createbutton/>
+      <Exportcsv/>
+    </div>
     </DndContext>
   )
 }

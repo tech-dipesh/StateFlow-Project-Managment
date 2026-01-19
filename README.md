@@ -93,11 +93,12 @@
   - I've to setup the `tailwind.config.js`.
   - Move the Createbutton the separate page. 
   - Finally Successfully Implenent the Chart Featuer with pie chart, ON the Separate chart comps, as well with on the hoomepage, Use two library to achieve it.
+  - User Can extract the entire data on both 2 format of the json/csv format
   - Add teh footer page
   - And also add the website logo
   - Add the featuer of teh export of our data on csv and the json.
   - Make the repsonvive desing for the mobile friendly to every page, from the homapge, chart, list, shortcut, and also header, and footer.
-  
+  - Remove all teh import hooks that i've used and also dummy data.
 
   # My Own Usage that i can use on coming days.
   - I've make one Input, and button which are mostly used my own style:

@@ -11,8 +11,7 @@ export default function Home() {
   return (
     <>
     <div className='gap-12 text-blue-400 grid justify-center my-8'>
-      <h1 className='font-semibold'>Task Status.</h1>
-      <h1>Total Task created: {tasks.length}</h1>
+      <h1 className='font-semibold text-2xl'>Total Task created: {tasks.length}</h1>
     </div>
     <Chart/>
     </>

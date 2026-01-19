@@ -46,7 +46,7 @@ const eventDelegation=(e)=>{
         >
         <thead>
           <tr className="bg-gray-100 border-b-2 border-gray-300 lg:space-8">
-            <th className="p-2 md:p-4 m-0 md:m-1 font-semibold text-left text-sm md:text-lg lg:text-xl relative max-w-30 md:max-w-none lg:text-2xl">
+            <th className="p-2 md:p-4 m-0 md:m-1 font-semibold text-left text-sm md:text-lg lg:text-xl relative max-w-30 md:max-w-none">
               Title
                 <span className="ml-2 py-1 px-2 text-xs rounded-xs bg-gray-400 opacity-65 cursor-pointer relative md:text-base" onClick={()=>setIsSortOption(!isSortOption)}>
                   <span className="md:hidden">{defaultSort}</span>

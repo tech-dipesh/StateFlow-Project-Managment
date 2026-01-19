@@ -39,10 +39,6 @@ let router = createBrowserRouter([
         element: <Board/>
       },
       {
-        path: "/practice",
-        element: <Practice/>
-      },
-      {
         path: "/chart",
         element: <Chart/>
       },
