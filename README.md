@@ -101,7 +101,7 @@
   - Remove all teh import hooks that i've used and also dummy data.
   - I've also implement the drag and drop undo chart view
   - add the Feature of the user can now pinned any task they want and show on homepage with data persist
-  
+  - Done code splitting of the page with the lazy loading.
 
 
   # My Own Usage that i can use on coming days.
