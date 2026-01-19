@@ -83,6 +83,4 @@ Scaling awareness
 - Sound effects for actions
 - Task search history
 - Recently viewed tasks
-- Pinned/starred tasks
 - Task sharing (generate shareable link)
-

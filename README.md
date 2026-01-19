@@ -100,6 +100,8 @@
   - Make the repsonvive desing for the mobile friendly to every page, from the homapge, chart, list, shortcut, and also header, and footer.
   - Remove all teh import hooks that i've used and also dummy data.
   - I've also implement the drag and drop undo chart view
+  - add the Feature of the user can now pinned any task they want and show on homepage with data persist
+  
 
 
   # My Own Usage that i can use on coming days.
