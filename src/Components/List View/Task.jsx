@@ -18,7 +18,7 @@ export default function Task() {
       <TaskInput setTasks={setTasks} isInput={isInput}/>
       <Search tasks={tasks} setTasks={setTasks} filterCritrea={filterCritrea} setFilterCritrea={setFilterCritrea} setSearchResults={setSearchResults}/>
       <TaskTable tasks={tasks} setTasks={setTasks} filterCritrea={filterCritrea} setFilterCritrea={setFilterCritrea} searchResults={searchResults}/>
-      <div className="flex justify-between w-full my-24">
+      <div className="flex justify-between w-full my-12 md:my-10 lg:my-24">
       <Createbutton isInput={isInput} setIsInput={setIsInput}/>
       <Exportcsv/>
       </div>
