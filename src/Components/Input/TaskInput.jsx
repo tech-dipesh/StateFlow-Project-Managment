@@ -25,21 +25,37 @@ export default function TaskInput({isInput}) {
     setData({title: '', status: '', priority: 'Medium', date: ''})
   }
   return (
-    <div className='h-1/4 grid items-center justify-center mt-5'>
+    <>
+      <div className='flex justify-center lg:mx-48 md:justify-between px-8 py-4'>
       {isInput && 
-      <form onSubmit={submitForm} className='max-w-4xl flex items-center gap-4'>
-      <input type="text" placeholder='Please Enter your task.' name='title' onChange={(e)=>setData((prev)=>({...prev, title: e.target.value}))} value={data.title}/>
-      <select name="status" className='cursor-pointer' onChange={(e)=>setData((prev)=>({...prev, status: e.target.value}))} value={data.status}>
+    <div className='md:flex-row gap-3 md:gap-4  md:items-center'>
+      <h2 className="text-lg font-semibold text-gray-700 flex justify-center">Enter New Task:</h2>
+      <form onSubmit={submitForm} 
+      className='flex flex-col gap-2 md:flex-row md:gap-4 md:items-center justify-center'>
+      <input type="text" placeholder='Please Enter your task.' name='title' className='w-full md:w-64 lg:w-80 px-3 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 text-sm md:text-base'
+ onChange={(e)=>setData((prev)=>({...prev, title: e.target.value}))} value={data.title}/>
+      <select name="status" className='w-full md:w-48 lg:w-56 px-3 py-2 border-2 border-gray-300 rounded-lg cursor-pointer text-sm md:text-base focus:outline-none focus:border-blue-500' onChange={(e)=>setData((prev)=>({...prev, status: e.target.value}))} value={data.status}>
         <option hidden name='status'>Change Status</option>
         <option name='todo'>To do</option>
         <option name='inprogress'>In Progress</option>
         <option name='Completed'>Completed</option>
       </select>
-      <Date setData={setData}/>
-      <input className='pointer bg-gray-600 cursor-pointer p-2 rounded-xl' type="submit" value='Submit'/>
+      <div className='w-full md:w-auto'>
+  <Date setData={setData}/>
+</div>
+      <input
+      className='w-full md:w-auto cursor-pointer bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors text-sm md:text-base' type='submit'/>
       </form>
-  }
-    <h1 className='text-red-500 text-5xl '>{error.length>0 && `${error}`}</h1>
     </div>
+  }
+      </div>
+  {error.length > 0 && (
+    <div className='flex justify-center mt-4'>
+    <p className='text-red-500 text-sm md:text-base font-semibold bg-red-50 px-4 py-2 rounded-lg border border-red-200'>
+      {error}
+    </p>
+  </div>
+)}
+</>
   )
 }

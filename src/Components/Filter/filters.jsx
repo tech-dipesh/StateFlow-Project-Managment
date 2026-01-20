@@ -18,7 +18,7 @@ export default function Filter({ options, isFilterPopup, SetIsFilterPopup, setOp
             className={`px-4 py-2 rounded-lg cursor-pointer text-white hover:bg-gray-700 transition-all duration-100
                  ${selectOption === i 
               ? 'bg-blue-500 text-white hover:bg-blue-600' 
-              : 'bg-gray-100 hover:bg-gray-700 '
+              : 'bg-gray-800 hover:bg-gray-700 '
             }`}
             key={option}
             >

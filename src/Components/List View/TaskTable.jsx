@@ -64,7 +64,7 @@ const eventDelegation=(e)=>{
            <th className="p-2 md:p-4 font-semibold text-left text-xs md:whitespace-nowrap md:text-lg lg:text-2xl">Status
                   <FontAwesomeIcon icon={faFilter} className='text-sm md:text-base cursor-pointer hover:text-blue-500 transition-colors ml-2 md:ml-5' onClick={()=>SetIsFilterPopup(!isFilterPopup)}/>
      <Filter options={["To do", "In progress", "Completed"]} isFilterPopup={isFilterPopup} SetIsFilterPopup={SetIsFilterPopup} optionValue={filterCritrea} setOptionValue={setFilterCritrea}/></th>
-            <th className=" md:table-cell p-2 md:p-4 text-center text-xs md:text-sm lg:text-2xl">Priority</th>
+            <th className=" md:table-cell p-2 md:p-4 text-center text-xs  md:text-sm lg:text-2xl">Priority</th>
             <th className=" md:table-cell p-2 md:p-4 text-center text-xs md:text-sm lg:text-2xl">Deadline</th>
             <th className=" md:table-cell p-2 md:p-4 text-center text-xs md:text-sm lg:text-2xl">Change</th>
             <th className=" md:table-cell p-2 md:p-4 text-center text-xs md:text-sm lg:text-2xl">Manage</th>

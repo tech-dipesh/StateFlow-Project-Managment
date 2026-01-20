@@ -24,14 +24,14 @@ setIsExport(!isExport);
 }
 return (
     <div className='mx-28'>
-      <button className="opacitiy-85 cursor-pointer bg-blue-500 font-semibold py-2 px-4 rounded hover:text-gray-500" onClick={()=>setIsExport(!isExport)}><FontAwesomeIcon icon={faFileExport}/>Export</button>
+      <button className="opacitiy-85 cursor-pointer bg-blue-500 font-semibold text-white py-2 px-4 rounded hover:text-gray-500" onClick={()=>setIsExport(!isExport)}><FontAwesomeIcon icon={faFileExport} color='white'/>Export</button>
       {
         isExport &&
           <div className='fixed inset-0 bg-black/50 flex items-center justify-center z-50'>
       <div className='relative bg-gray-800 p-12 rounded flex gap-4'>
         <FontAwesomeIcon className='absolute top-2 right-2 cursor-pointer' icon={faXmark} onClick={()=>setIsExport(!isExport)}/>
-        <div className='bg-blue-500 font-semibold py-2 px-4 rounded cursor-pointer' onClick={()=>exportCsv('csv')}><FontAwesomeIcon icon={faFileCsv}/> CSV</div>
-        <div className='bg-blue-500 font-semibold py-2 px-4 rounded flex items-center gap-1 cursor-pointer' onClick={()=>exportJson('json')}>
+        <div className='bg-blue-500 font-semibold py-2 px-4 rounded cursor-pointer text-white' onClick={()=>exportCsv('csv')}><FontAwesomeIcon icon={faFileCsv} color='white'/> CSV</div>
+        <div className='bg-blue-500 font-semibold py-2 px-4 rounded flex items-center gap-1 cursor-pointer text-white' onClick={()=>exportJson('json')}>
           <img src={Json} className='h-4 w-4'/> JSON
         </div>
       </div>
