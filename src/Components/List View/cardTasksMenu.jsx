@@ -4,47 +4,64 @@ import React, { useContext, useState } from 'react'
 import Option from '../Filter/Option'
 import Label from "../Filter/Label"
 import { dataContext } from '../../context/dataContextProvider'
-export default function CardTaskMenu({bothEdit, bothEditFeature, task, setTasks}) {
+import { each } from 'lodash'
+export default function CardTaskMenu({bothEdit, bothEditFeature, task}) {
   const [isMenu, setIsMenu]=useState(false);
   const [isLabel, setIsLabel]=useState(false);
-  const {allPinned, setAllPinned, tasks}=useContext(dataContext);
+  const [isPinned, setIsPinned]=useState(task.isPinned);
+
+  const {tasks, setTasks}=useContext(dataContext);
   const deleteTask=()=>{
     const thisId=task.id;
     const updateTask=tasks.filter(t=>t.id!==thisId);
     setTasks(updateTask);
   }
 
-  const setPinned=()=>{
-    setAllPinned(prev=>
-      prev.some(p=>
-        p.id===task.id)?prev:[...prev, task]
-    )
+  const clickMenu=()=>{
+    setIsLabel(false)
+    setIsMenu(!isMenu)
   }
+  
+  const clickLabel=(e)=>{
+    e.stopPropagation()
+    setIsLabel(!isLabel)
+  }
+
+  const setPinned=()=>{
+      setIsPinned(!isPinned)
+       setTasks(tasks.map(eachTask => 
+      eachTask.id === task.id ? {...eachTask, isPinned: true} : eachTask
+      ));
+      console.log("updated task is", task);
+  }
+  
   return (
   <>
-  <td className='p-2 w-64'>
+  <td className='p-2 w-full md:w-64'>
     <Option setTasks={setTasks} id={task.id} tasks={tasks} urgency={task.priority}/></td>
     <td className='grid justify-center my-2'>{task.date=='' ? 'null': `${task.date}`}</td>
-      <td className="w-5">
+      <td className="w-auto md:w-20">
         <button onClick={(e) => bothEditFeature(e, task)} className="p-2 m-2 bg-blue-400 rounded-xs cursor-pointer">{bothEdit === false ? 'Edit' : 'Save'}</button>
         </td>
-  <td className="relative p-4 text-xl font-semibold text-left cursor-pointer" onClick={()=>setIsMenu(!isMenu)}>
+  <td className="relative p-4 text-xl font-semibold text-left cursor-pointer" onClick={clickMenu}>
   <FontAwesomeIcon icon={faEllipsis}/>
-  
   {isMenu && (
-    <div className='absolute w-32 right-10 bg-gray-800 rounded-lg border border-gray-700 z-50'>
+    // <div className='absolute w-40 md:w-32 right-0 lg:right-40 top-full mt-1 bg-gray-800 rounded-lg border border-gray-700 z-50 shadow-lg'>
+    <div className='absolute w-64 md:w-72 lg:w-80 right-0 top-full mt-1 bg-gray-800 rounded-lg border border-gray-700 z-50 shadow-lg'>
       <button className={`w-full px-2 py-1 justify-center text-left flex items-center cursor-pointer hover:bg-gray-700 text-white`} onClick={()=>deleteTask()}>Delete</button>
-      <button className={`w-full px-2 py-1 justify-center flex items-center gap-2 cursor-pointer hover:bg-gray-700 text-white`} onClick={(e)=>(
-        e.stopPropagation(),
-        setIsLabel(!isLabel)
-      )}>🏷️</button>
+      <button className={`w-full px-2 py-1 justify-center flex items-center gap-2 cursor-pointer hover:bg-gray-700 text-white`} onClick={(e)=>clickLabel(e)}>🏷️</button>
       
       {isLabel && (
         <div className='mt-2' onClick={(e)=>e.stopPropagation()}>
-          <Label setIsLabel={setIsLabel} setIsMenu={setIsMenu} isLabel={isLabel} id={task.id}/>
+          <Label setIsLabel={setIsLabel} setIsMenu={setIsMenu} isMenu={isMenu} isLabel={isLabel} id={task.id}/>
         </div>
       )}
-      <button className='text-white font-semibold justify-center grid align-middle left-2/4 px-10 py-2'><FontAwesomeIcon icon={faThumbTack} className='cursor-pointer' onClick={setPinned}/></button>
+      <button className='w-full px-2 py-1 justify-center text-left flex items-center cursor-pointer hover:bg-gray-700 text-white'>
+      {isPinned ?
+      <FontAwesomeIcon icon={faThumbTack} color='red' className='cursor-pointer' onClick={setPinned}/>:
+      <FontAwesomeIcon icon={faThumbTack} className='cursor-pointer' onClick={setPinned}/>
+    }
+      </button>
     </div>
   )}
 </td>

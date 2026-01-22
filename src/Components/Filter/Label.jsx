@@ -9,7 +9,7 @@ import {dataContext} from "../../context/dataContextProvider"
 //   { value: 'Health', label: 'Health' },
 // ];
 
-const Label = ({setIsLabel, id}) => {
+const Label = ({setIsLabel, id, setIsMenu, isMenu}) => {
   const {tasks, setTasks}=useContext(dataContext)
   const mathThatId=tasks.find(task=>task.id===id) || [];
   let allPossibleOptions=mathThatId.Labels.map(t=> ({value: t, label: t}));
@@ -17,18 +17,27 @@ const Label = ({setIsLabel, id}) => {
     setIsLabel(true)
     const allListValues=value.map(f=>f.value) || []
     setTasks(prev=>
-        prev.map(task=>
-          task.id===id ?{...task, Labels: allListValues}:task
+      prev.map(task=>
+        task.id===id ?{...task, Labels: allListValues}:task
         ))
   }
   return (
-    <div className='w-64 relative'>
+    // <div className='w-32 md:w-48 lg:w-48 relative p-2 flex flex-col'>
+    <div className='w-full p-3 flex flex-col gap-2'>
     <CreatableSelect
-    menuPortalTarget={document.body}
+    // Taken from docs to shhow above page.
+    styles={{
+    container: (base) => ({ ...base, width: '100%' }),
+    menu: (base) => ({ ...base, zIndex: 100 }),
+    input: (base=>({...base, cursor: 'text'}))
+  }}
     isMulti
-    options={allPossibleOptions} 
-    onChange={changeLabels}/>
-    <button>Ok</button>
+    options={allPossibleOptions}
+    onChange={changeLabels}
+    autoFocus
+    openMenuOnFocus
+    />
+    <button className='w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 cursor-pointer font-semibold' onClick={()=>setIsMenu(!isMenu)}>Ok</button>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect} from "react";
 import useLocalStorage from "../hooks/useLocalStorage.js"
 import useUndoRedo from "../hooks/useUndoRedo.js"
 
@@ -19,7 +19,6 @@ export default function DataContextProvider({children}){
 useEffect(() => {
   setStoreTask(present);
 }, [present, setStoreTask]);
-  const [allPinned, setAllPinned]=useLocalStorage('pinned', []);
 
   return (
     <dataContext.Provider  value={{ 
@@ -29,8 +28,6 @@ useEffect(() => {
       redo: redoOperation,
       canUndo: past,
       canRedo: future,
-      allPinned,
-      setAllPinned
     }}>
       {children}
     </dataContext.Provider>
