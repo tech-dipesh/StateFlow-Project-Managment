@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { dataContext } from '../../context/dataContextProvider';
 import Date from './Date';
 
-export default function TaskInput({isInput}) {
+export default function TaskInput({isInput, setIsInput}) {
     const {setTasks}=useContext(dataContext);
   
   const [data, setData]=useState({
@@ -43,6 +43,8 @@ export default function TaskInput({isInput}) {
       <div className='w-full md:w-auto'>
   <Date setData={setData}/>
 </div>
+    <input
+className='w-full md:w-auto cursor-pointer bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors text-sm md:text-base' type='submit' value='Cancel' onClick={()=>{setIsInput(!isInput)}}/>
       <input
       className='w-full md:w-auto cursor-pointer bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors text-sm md:text-base' type='submit'/>
       </form>

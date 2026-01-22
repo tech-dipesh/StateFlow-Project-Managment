@@ -49,7 +49,7 @@ export default function TableBody({ displayAllTasks, setTitleEdit, titleedit, se
     <tbody>
       {displayAllTasks.length == 0 ? (
       <tr>
-        <td colSpan={2} className='p-2 md:p-4 text-lg  md:text-2xl lg:text-3xl text-red-500 font-semibold text-center'>The List is empty.</td>
+        <td colSpan={8} className='p-2 md:p-4 text-lg  md:text-2xl lg:text-3xl text-red-500 font-semibold text-center'>The List is empty.</td>
      </tr>
       ) :
         (displayAllTasks.map((task) => (

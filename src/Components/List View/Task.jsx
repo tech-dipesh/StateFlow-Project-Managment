@@ -15,7 +15,7 @@ export default function Task() {
     const [isInput, setIsInput]=useState(false);
   return !tasks?<Loading/>:(
     <div className="min-h-screen">
-      <TaskInput setTasks={setTasks} isInput={isInput}/>
+      <TaskInput setTasks={setTasks} isInput={isInput} setIsInput={setIsInput}/>
       <Search tasks={tasks} setTasks={setTasks} filterCritrea={filterCritrea} setFilterCritrea={setFilterCritrea} setSearchResults={setSearchResults}/>
       <TaskTable tasks={tasks} setTasks={setTasks} filterCritrea={filterCritrea} setFilterCritrea={setFilterCritrea} searchResults={searchResults}/>
       <div className="flex justify-between w-full my-12 md:my-10 lg:my-24">

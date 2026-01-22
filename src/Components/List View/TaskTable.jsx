@@ -37,15 +37,13 @@ const eventDelegation=(e)=>{
 }
 
   return (
-    <div className="max-h-full flex flex-col items-center overflow-auto p-1 md:p-2 lg:p-4 md:h-5/6 lg:h-11/12">
+    <div className="flex flex-col items-center p-1 md:p-2 lg:p-4 ">
       <h1 className="text-xl font-bold my-2 md:text-2xl lg:text-3xl">Task Table</h1>
-      <div className="overflow-x-auto w-full">
-
-     <table className="min-w-full max-w-2xl border-2 border-gray-300 md:max-w-5xl md:whitespace-nowrap lg:w-full lg:max-w-7xl table-fixed"
+     <table className="min-w-full max-w-2xl border-2 overflow-x-auto border-gray-300 md:max-w-5xl md:whitespace-nowrap lg:w-full lg:max-w-7xl md:table-auto"
         onClick={(e)=>eventDelegation(e)}
         >
         <thead>
-          <tr className="bg-gray-100 border-b-2 border-gray-300 lg:space-8">
+          <tr className="bg-gray-100 border-b-2 border-gray-300  lg:my-8">
             <th className="p-2 md:p-4 m-0 md:m-1 font-semibold text-left text-sm md:text-lg lg:text-xl relative max-w-30 md:max-w-none">
               Title
                 <span className="ml-2 py-1 px-2 text-xs rounded-xs bg-gray-400 opacity-65 cursor-pointer relative md:text-base" onClick={()=>setIsSortOption(!isSortOption)}>
@@ -62,8 +60,9 @@ const eventDelegation=(e)=>{
                   }
             </th>
            <th className="p-2 md:p-4 font-semibold text-left text-xs md:whitespace-nowrap md:text-lg lg:text-2xl">Status
-                  <FontAwesomeIcon icon={faFilter} className='text-sm md:text-base cursor-pointer hover:text-blue-500 transition-colors ml-2 md:ml-5' onClick={()=>SetIsFilterPopup(!isFilterPopup)}/>
-     <Filter options={["To do", "In progress", "Completed"]} isFilterPopup={isFilterPopup} SetIsFilterPopup={SetIsFilterPopup} optionValue={filterCritrea} setOptionValue={setFilterCritrea}/></th>
+              <FontAwesomeIcon icon={faFilter} className='text-sm md:text-base cursor-pointer hover:text-blue-500 transition-colors ml-2 md:ml-5' onClick={()=>SetIsFilterPopup(!isFilterPopup)}/>
+     <Filter options={["To do", "In progress", "Completed"]} isFilterPopup={isFilterPopup} SetIsFilterPopup={SetIsFilterPopup} optionValue={filterCritrea} setOptionValue={setFilterCritrea}/>
+          </th>
             <th className=" md:table-cell p-2 md:p-4 text-center text-xs  md:text-sm lg:text-2xl">Priority</th>
             <th className=" md:table-cell p-2 md:p-4 text-center text-xs md:text-sm lg:text-2xl">Deadline</th>
             <th className=" md:table-cell p-2 md:p-4 text-center text-xs md:text-sm lg:text-2xl">Change</th>
@@ -72,7 +71,6 @@ const eventDelegation=(e)=>{
         </thead>
           <TableBody displayAllTasks={displayAllTasks} titleedit={titleedit} setTitleEdit={setTitleEdit} statusedit={statusedit} setStatusEdit={setStatusEdit}/>
       </table>
-    </div>
     </div>
   )
 }

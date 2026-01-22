@@ -9,9 +9,9 @@ export default function Filter({ options, isFilterPopup, SetIsFilterPopup, setOp
   }
   { return isFilterPopup && (
       <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>
-      <div className='bg-gray-800 rounded-2xl p-6 w-full max-w-md shadow-2xl'>
+      <div className='bg-gray-800 rounded-2xl p-6 w-full max-w-md shadow-2xl px-2'>
         <h2 className='text-xl font-semibold text-white mb-4'>Filter Options</h2>
-        <div className='flex flex-wrap gap-3 mb-6'>
+        <div className='flex flex-col md:flex-row md:flex-nowrap gap-3 mb-6'>
           {options.map((option, i) => (
             <button
             onClick={()=>(setOptionValue(option), setSelectoption(i))}

@@ -174,4 +174,12 @@
 - React Loader Spinner
 - Vercel Analytics
 
+
+
+
+## Post Maintainence:
+  - Add the better Stylying When list  is empty on the homepage, and also the colspan problem: 01/23
+  - Also add the cancel button, for the input field: 01/23
+  - Fix the stylying f the draggable scrollab issue on the table when input is empty.
+
 >:warning: When it says infinite rerender on the react it mainly due to the infinite render or not wrap out setter method on the useEffect, we've to give the depedancy array to stop rerendering every time as our state is changed.
