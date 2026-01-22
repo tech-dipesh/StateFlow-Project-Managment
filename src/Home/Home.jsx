@@ -9,7 +9,10 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function Home() {
   const navigate=useNavigate();
-  const {tasks, allPinned}=useContext(dataContext)
+  const {tasks}=useContext(dataContext)
+  console.log(tasks);
+  const allPinned=tasks.filter(({isPinned})=>isPinned==true);
+  console.log("all pinned is", allPinned);
   return (
     <>
    <h1 className="text-center text-lg font-semibold mb-3">

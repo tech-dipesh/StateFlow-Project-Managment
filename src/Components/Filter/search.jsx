@@ -1,6 +1,8 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { dataContext } from "../../context/dataContextProvider";
 
-export default function Search({ tasks, setSearchResults }) {
+export default function Search({ setSearchResults }) {
+  const {tasks}=useContext(dataContext)
   const [search, setSearch] = useState();
   const searchValue = (e) => {
     setSearch(e.target.value)

@@ -17,6 +17,7 @@
 - `whitespace-nowrap` make on single line not go on next line style
 - `startCase(camelCase(val))` Convert any value to the CamelCase with the StartCase 
 - `text-zinc-500` it's also the option on color that we cna use.
+- for finding the single list i must use find while for teh multiple list i've to use the .find
 
 
 # Some syntax that i've forgetten or issue that i've fixed which i myself fix.:
@@ -181,8 +182,11 @@
   - Add the better Stylying When list  is empty on the homepage, and also the colspan problem: 01/23
   - Also add the cancel button, for the input field: 01/23
   - Fix the stylying f the draggable scrollab issue on the table when input is empty. 01/23
-  - Sytle of the label bar, with als add the isLabel to the input field, and also make teh auto focus with input cursor: text, 01/23
+  - Sytle of the label bar, with als add the isLabel to the input field, and also make teh auto focus with input cursor: text, 01/23  
   - With by Default isPinned by default is false, remove unnecesary props passing that i can get from teh useConetxt. 01/23
   - Remove teh separate Pinned from the contextBar. 01/23
+  - Style the error page and with showing what the error really is, fix teh stylye of the create and export.
+  - Implement the Archive Features.
+  
 
 >:warning: When it says infinite rerender on the react it mainly due to the infinite render or not wrap out setter method on the useEffect, we've to give the depedancy array to stop rerendering every time as our state is changed.

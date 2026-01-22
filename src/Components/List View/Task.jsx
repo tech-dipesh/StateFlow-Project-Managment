@@ -8,19 +8,21 @@ import Undoredo from "../Common/undoRedo.jsx";
 import Createbutton from "../Common/Createbutton.jsx";
 import Exportcsv from "../Common/Exportcsv.jsx";
 import Loading from "../Common/Loader.jsx";
+import Archive from "./Archive.jsx";
 export default function Task() {
-  const {tasks, setTasks}=useContext(dataContext);
+  const {tasks}=useContext(dataContext);
   const [filterCritrea, setFilterCritrea]=useState();
   const [searchResults, setSearchResults] = useState(null);  
     const [isInput, setIsInput]=useState(false);
   return !tasks?<Loading/>:(
     <div className="min-h-screen">
-      <TaskInput setTasks={setTasks} isInput={isInput} setIsInput={setIsInput}/>
-      <Search tasks={tasks} setTasks={setTasks} filterCritrea={filterCritrea} setFilterCritrea={setFilterCritrea} setSearchResults={setSearchResults}/>
-      <TaskTable tasks={tasks} setTasks={setTasks} filterCritrea={filterCritrea} setFilterCritrea={setFilterCritrea} searchResults={searchResults}/>
+      <TaskInput isInput={isInput} setIsInput={setIsInput}/>
+      <Search filterCritrea={filterCritrea} setFilterCritrea={setFilterCritrea} setSearchResults={setSearchResults}/>
+      <TaskTable filterCritrea={filterCritrea} setFilterCritrea={setFilterCritrea} searchResults={searchResults}/>
       <div className="flex justify-between w-full my-12 md:my-10 lg:my-24">
       <Createbutton isInput={isInput} setIsInput={setIsInput}/>
       <Exportcsv/>
+      <Archive/>
       </div>
       <Undoredo/>
     </div>

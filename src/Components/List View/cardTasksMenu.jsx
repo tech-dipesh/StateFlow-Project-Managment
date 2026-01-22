@@ -4,11 +4,14 @@ import React, { useContext, useState } from 'react'
 import Option from '../Filter/Option'
 import Label from "../Filter/Label"
 import { dataContext } from '../../context/dataContextProvider'
-import { each } from 'lodash'
+import { each, find } from 'lodash'
 export default function CardTaskMenu({bothEdit, bothEditFeature, task}) {
   const [isMenu, setIsMenu]=useState(false);
   const [isLabel, setIsLabel]=useState(false);
   const [isPinned, setIsPinned]=useState(task.isPinned);
+
+  const [archives, setArchives]=useState([]);
+  console.log(archives);
 
   const {tasks, setTasks}=useContext(dataContext);
   const deleteTask=()=>{
@@ -32,9 +35,15 @@ export default function CardTaskMenu({bothEdit, bothEditFeature, task}) {
        setTasks(tasks.map(eachTask => 
       eachTask.id === task.id ? {...eachTask, isPinned: true} : eachTask
       ));
-      console.log("updated task is", task);
   }
   
+  const doArchives=()=>{
+    const updateTask=tasks.filter(t=>t.id!==task.id);
+    setTasks(updateTask);
+  setArchives(prev => 
+        prev.some(a => a.id === task.id) ? prev  : [...prev, task] 
+  );
+  }
   return (
   <>
   <td className='p-2 w-full md:w-64'>
@@ -61,6 +70,9 @@ export default function CardTaskMenu({bothEdit, bothEditFeature, task}) {
       <FontAwesomeIcon icon={faThumbTack} color='red' className='cursor-pointer' onClick={setPinned}/>:
       <FontAwesomeIcon icon={faThumbTack} className='cursor-pointer' onClick={setPinned}/>
     }
+      </button>
+      <button className='w-full px-2 py-1 justify-center text-left flex items-center cursor-pointer hover:bg-gray-700 text-white' onClick={doArchives}>
+      Archive
       </button>
     </div>
   )}

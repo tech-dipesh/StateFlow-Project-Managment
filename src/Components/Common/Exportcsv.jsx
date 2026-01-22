@@ -23,7 +23,7 @@ window.open(encodedUri);
 setIsExport(!isExport);
 }
 return (
-    <div className='mx-28'>
+    <div className='lg:mx-28'>
       <button className="opacitiy-85 cursor-pointer bg-blue-500 font-semibold text-white py-2 px-4 rounded hover:text-gray-500" onClick={()=>setIsExport(!isExport)}><FontAwesomeIcon icon={faFileExport} color='white'/>Export</button>
       {
         isExport &&
