@@ -1,5 +1,5 @@
 
-import { createContext, useEffect} from "react";
+import { createContext, useEffect, useState} from "react";
 import useLocalStorage from "../hooks/useLocalStorage.js"
 import useUndoRedo from "../hooks/useUndoRedo.js"
 
@@ -7,6 +7,7 @@ export const dataContext=createContext();
 
 export default function DataContextProvider({children}){
  const [storeTask, setStoreTask] = useLocalStorage('tasks', []);
+   const [archives, setArchives]=useState([]);
   const { 
     present,
     past,
@@ -28,6 +29,8 @@ useEffect(() => {
       redo: redoOperation,
       canUndo: past,
       canRedo: future,
+      archives, 
+      setArchives
     }}>
       {children}
     </dataContext.Provider>

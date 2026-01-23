@@ -9,9 +9,7 @@ export default function CardTaskMenu({bothEdit, bothEditFeature, task}) {
   const [isMenu, setIsMenu]=useState(false);
   const [isLabel, setIsLabel]=useState(false);
   const [isPinned, setIsPinned]=useState(task.isPinned);
-
-  const [archives, setArchives]=useState([]);
-  console.log(archives);
+  const {archives, setArchives} =useContext(dataContext)
 
   const {tasks, setTasks}=useContext(dataContext);
   const deleteTask=()=>{
@@ -40,9 +38,11 @@ export default function CardTaskMenu({bothEdit, bothEditFeature, task}) {
   const doArchives=()=>{
     const updateTask=tasks.filter(t=>t.id!==task.id);
     setTasks(updateTask);
-  setArchives(prev => 
-        prev.some(a => a.id === task.id) ? prev  : [...prev, task] 
-  );
+//    setArchives(prev => {
+//   const filtered = prev.filter(item => item.id !== task.id);
+//   return [...filtered, task];
+// });
+setArchives(prev=>[...prev, task])
   }
   return (
   <>
