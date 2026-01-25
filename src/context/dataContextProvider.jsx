@@ -7,7 +7,7 @@ export const dataContext=createContext();
 
 export default function DataContextProvider({children}){
  const [storeTask, setStoreTask] = useLocalStorage('tasks', []);
-   const [archives, setArchives]=useState([]);
+  const [archives, setArchives]=useLocalStorage('archives', []);
   const { 
     present,
     past,
