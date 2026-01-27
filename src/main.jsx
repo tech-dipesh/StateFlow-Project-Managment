@@ -6,13 +6,13 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router";
-import Home from './Home/Home.jsx';
-import Loader from "./Components/Common/Loader"
-import Error from './Components/Common/Error';
-const List=lazy(()=>import("./Components/List View/Task"))
-const Board=lazy(()=>import("./Components/Board View/Board"))
-const Keyboardshortcut=lazy(()=>import("./Components/Common/keyboard-shortcut"))
-const Chart=lazy(()=>import("./Components/Chart/Chart"))
+import Home from './Pages/Home';
+import Loader from "./Common/Loader"
+import Error from './Common/Error';
+const List=lazy(()=>import("./Pages/Task.jsx"))
+const Board=lazy(()=>import("./Pages/Board.jsx"))
+const Keyboardshortcut=lazy(()=>import("./Pages/keyboard-shortcut.jsx"))
+const Chart=lazy(()=>import("./Pages/Chart.jsx"))
 
 let router = createBrowserRouter([
 {

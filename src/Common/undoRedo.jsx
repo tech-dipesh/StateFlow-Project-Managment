@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { dataContext } from '../../context/dataContextProvider'
+import { dataContext } from '../context/dataContextProvider'
 
 export default function Undoredo() {
   const {undo, redo, canUndo, canRedo}=useContext(dataContext)

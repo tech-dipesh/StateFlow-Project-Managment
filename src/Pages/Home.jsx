@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { dataContext } from '../context/dataContextProvider'
 import { Line, Pie } from 'react-chartjs-2'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import Chart from '../Components/Chart/Chart';
+import Chart from './Chart';
 import { useNavigate } from 'react-router';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -10,9 +10,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 export default function Home() {
   const navigate=useNavigate();
   const {tasks}=useContext(dataContext)
-  console.log(tasks);
   const allPinned=tasks.filter(({isPinned})=>isPinned==true);
-  console.log("all pinned is", allPinned);
   return (
     <>
    <h1 className="text-center text-lg font-semibold mb-3">

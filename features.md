@@ -84,3 +84,8 @@ Scaling awareness
 - Task search history
 - Recently viewed tasks
 - Task sharing (generate shareable link)
+
+
+
+
+<!-- Two feature of dark light mode and the search cut option -->

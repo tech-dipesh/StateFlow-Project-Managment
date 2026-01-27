@@ -1,7 +1,7 @@
 import React, { useContext} from "react";
 import { closestCorners, DndContext, KeyboardSensor, MouseSensor, TouchSensor, useSensor, useSensors } from "@dnd-kit/core";
-import {dataContext} from "../../context/dataContextProvider"
-import Columns from "./Columns";
+import {dataContext} from "../context/dataContextProvider"
+import Columns from "../Components/Board View/Columns";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Createbutton from "../Common/Createbutton";
 import Exportcsv from "../Common/Exportcsv";

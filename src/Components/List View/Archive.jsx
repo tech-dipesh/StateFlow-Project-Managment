@@ -6,7 +6,6 @@ import { dataContext } from '../../context/dataContextProvider';
 export default function Archive() {
   const [isArchive, setIsArchive]=useState(false);
     const {archives, setArchives} =useContext(dataContext)
-  console.log(archives);
   const deleteTask=(id)=>{
     setArchives(prev=>
       prev.filter(p=>p.id!==id)

@@ -1,8 +1,8 @@
 import { faFileCsv, faFileExport, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useContext, useState } from 'react'
-import { dataContext } from '../../context/dataContextProvider'
-import Json from "../../assets/json.png"
+import { dataContext } from '../context/dataContextProvider'
+import Json from "../assets/json.png"
 export default function Exportcsv() {
   const {tasks}=useContext(dataContext)
   const [isExport, setIsExport]=useState(false);

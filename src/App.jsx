@@ -1,12 +1,12 @@
 import {  useState } from 'react'
 import './App.css'
-import Task from './Components/List View/Task'
-import Header from "./Components/Common/Header"
+import Task from './Pages/Task'
+import Header from "./Common/Header"
 import { Outlet } from 'react-router'
-import Board from './Components/Board View/Board'
+import Board from './Pages/Board'
 import DataContextProvider from './context/dataContextProvider'
-import Keyword from './Home/keyword'
-import Footer from "./Components/Common/Footer"
+import Keyword from './Utils/keyword'
+import Footer from "./Common/Footer"
 import { Analytics } from '@vercel/analytics/react';
 function App() {
   const [isPopup, setIsPopup]=useState(false);

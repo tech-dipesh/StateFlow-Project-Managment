@@ -1,14 +1,14 @@
-import TaskInput from "../Input/TaskInput";
+import TaskInput from "../Components/Input/TaskInput.jsx";
 import {useContext, useState} from "react"
-import TaskTable from "./TaskTable"
-import Search from "../Filter/search.jsx";
-import Option from "../Filter/Option"
-import { dataContext } from "../../context/dataContextProvider.jsx";
+import TaskTable from "../Components/List View/TaskTable.jsx"
+import Search from "../Components/Filter/search.jsx";
+import Option from "../Components/Filter/Option.jsx"
+import { dataContext } from "../context/dataContextProvider.jsx";
 import Undoredo from "../Common/undoRedo.jsx";
 import Createbutton from "../Common/Createbutton.jsx";
 import Exportcsv from "../Common/Exportcsv.jsx";
 import Loading from "../Common/Loader.jsx";
-import Archive from "./Archive.jsx";
+import Archive from "../Components/List View/Archive.jsx";
 export default function Task() {
   const {tasks}=useContext(dataContext);
   const [filterCritrea, setFilterCritrea]=useState();

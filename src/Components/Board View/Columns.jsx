@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Column from "./Column";
 import { DndContext } from "@dnd-kit/core";
 import { dataContext } from "../../context/dataContextProvider";
-import Undoredo from "./../Common/undoRedo";
+import Undoredo from "../../Common/undoRedo";
 const COLUMNS=[
   { id: "TODO", title: "To do",},
 { id: "IN PROGRESS", title: "In Progress"},

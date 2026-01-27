@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Pie } from 'react-chartjs-2';
-import { dataContext } from '../../context/dataContextProvider';
+import { dataContext } from '../context/dataContextProvider';
 
 
 const data = {

@@ -12,7 +12,6 @@ const colourOptions=[
 
 const MyComponent = () => {
   const [label, setLabel]=useState([]);
-  console.log("label value is", label);
   return (
     <CreatableSelect
     styles={{ control: (baseStyles, state) => ({ ...baseStyles,  borderColor: state.isFocused ? 'grey' : 'red' })}}
