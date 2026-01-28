@@ -18,6 +18,7 @@ export default function Search({ setSearchResults }) {
     console.log('focus', onFocus);
   }
   
+
   return (
     <div className='flex md:justify-end px-8 py-4'>
       <div className='flex flex-col gap-2'>
@@ -32,7 +33,7 @@ export default function Search({ setSearchResults }) {
             onChange={searchValue}
             value={search}
           />
-          {onFocus && <FontAwesomeIcon icon={faXmark} className="cursor-pointer absolute ml:40 md:ml-70 tmd:text-2xl mt-2 lg:ml-46 "/>}
+          {onFocus && <FontAwesomeIcon icon={faXmark} onClick={()=>setSearch('')} className="cursor-pointer absolute ml:40 md:ml-70 tmd:text-2xl mt-2 lg:ml-46 "/>}
           <div className="flex gap-3 w-full md:auto">
           <button className="flex-1 md:flex-none md:px-2  px-6 py-2 bg-gray-300 text-gray-700 rounded-lg cursor-pointer font-semibold hover:bg-gray-400 order-1 md:order-2"
             onClick={() => setSearch('')}>

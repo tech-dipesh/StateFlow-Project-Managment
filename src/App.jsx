@@ -16,9 +16,11 @@ function App() {
     <Header isPopup={isPopup} setIsPopup={setIsPopup}/>
     <Keyword isPopup={isPopup} setIsPopup={setIsPopup}/>
     <Analytics/>
+    <div className="flex-1 pb-20">
     <Outlet/>
-    <Footer/>
+    </div>
     </DataContextProvider>
+    <Footer/>
     </>
   )
 }

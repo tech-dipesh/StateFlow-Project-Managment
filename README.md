@@ -205,5 +205,5 @@
   - Fix lot of spelling and structure issued on the `readme.md` file
   - Add the Project Screenshot about the output
   - make Better Folder Structuer with moving teh Pages to separate folder, and Also the Common to separate from Components and also fix the import Export error: 01/26
-  
+  - improve Footer Page.
   

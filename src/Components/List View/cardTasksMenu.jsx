@@ -42,8 +42,10 @@ export default function CardTaskMenu({bothEdit, bothEditFeature, task}) {
 //   const filtered = prev.filter(item => item.id !== task.id);
 //   return [...filtered, task];
 // });
-setArchives(prev=>[...prev, task])
+    setArchives(prev=>[...prev, task])
   }
+
+  const optionStyle='w-full px-2 py-1 justify-center text-left flex items-center cursor-pointer hover:bg-gray-700 text-white';
   return (
   <>
   <td className='p-2 w-full md:w-64'>
@@ -57,23 +59,24 @@ setArchives(prev=>[...prev, task])
   {isMenu && (
     // <div className='absolute w-40 md:w-32 right-0 lg:right-40 top-full mt-1 bg-gray-800 rounded-lg border border-gray-700 z-50 shadow-lg'>
     <div className='absolute w-64 md:w-72 lg:w-80 right-0 top-full mt-1 bg-gray-800 rounded-lg border border-gray-700 z-50 shadow-lg'>
-      <button className={`w-full px-2 py-1 justify-center text-left flex items-center cursor-pointer hover:bg-gray-700 text-white`} onClick={()=>deleteTask()}>Delete</button>
-      <button className={`w-full px-2 py-1 justify-center flex items-center gap-2 cursor-pointer hover:bg-gray-700 text-white`} onClick={(e)=>clickLabel(e)}>🏷️</button>
+      <button className={optionStyle} onClick={()=>deleteTask()}>Delete</button>
+      <button className={optionStyle} onClick={(e)=>clickLabel(e)}>🏷️</button>
       
       {isLabel && (
         <div className='mt-2' onClick={(e)=>e.stopPropagation()}>
           <Label setIsLabel={setIsLabel} setIsMenu={setIsMenu} isMenu={isMenu} isLabel={isLabel} id={task.id}/>
         </div>
       )}
-      <button className='w-full px-2 py-1 justify-center text-left flex items-center cursor-pointer hover:bg-gray-700 text-white'>
+      <button className={optionStyle}>
       {isPinned ?
       <FontAwesomeIcon icon={faThumbTack} color='red' className='cursor-pointer' onClick={setPinned}/>:
       <FontAwesomeIcon icon={faThumbTack} className='cursor-pointer' onClick={setPinned}/>
     }
       </button>
-      <button className='w-full px-2 py-1 justify-center text-left flex items-center cursor-pointer hover:bg-gray-700 text-white' onClick={doArchives}>
+      <button className={optionStyle} onClick={doArchives}>
       Archive
       </button>
+      <button></button>
     </div>
   )}
 </td>

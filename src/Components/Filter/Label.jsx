@@ -12,7 +12,8 @@ import {dataContext} from "../../context/dataContextProvider"
 const Label = ({setIsLabel, id, setIsMenu, isMenu}) => {
   const {tasks, setTasks}=useContext(dataContext)
   const mathThatId=tasks.find(task=>task.id===id) || [];
-  let allPossibleOptions=mathThatId.Labels.map(t=> ({value: t, label: t}));
+  
+  let allPossibleOptions=mathThatId.Labels?.map(t=> ({value: t, label: t}));
   const changeLabels=(value)=>{
     setIsLabel(true)
     const allListValues=value.map(f=>f.value) || []
